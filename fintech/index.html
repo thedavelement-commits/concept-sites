@@ -1,0 +1,445 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Plover | Get paid from anywhere</title>
+<meta name="description" content="Plover gives freelancers and small studios local account details in 9 currencies, fast invoices and fair conversion. A concept project by Dave.">
+<meta name="theme-color" content="#2338F5">
+<meta property="og:title" content="Plover">
+<meta property="og:description" content="Get paid from anywhere and keep more of it.">
+<meta property="og:image" content="/fintech/img/hero.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%232338F5'/%3E%3Cpath d='M16 16L29 9.500A14 14 0 0129 22.500z' fill='%23FF7A3D'/%3E%3Ccircle cx='13' cy='11' r='2.400' fill='%23fff'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@400..800&family=Onest:wght@400..700&family=Newsreader:ital,opsz,wght@0,6..72,500;1,6..72,500&family=Syne:wght@600;700&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="/fintech/img/hero.jpg">
+<style>
+:root{
+  --cobalt:#2338F5;--cobalt-deep:#1526B8;--ink:#0B0D1F;--bone:#F4F2EC;--bone-2:#E9E6DC;--tang:#FF7A3D;--sky:#DCE3FF;--white:#fff;
+  --muted:#5C6078;--line:rgba(11,13,31,.12);
+  --display:"Funnel Display",system-ui,sans-serif;--body:"Onest",system-ui,sans-serif;
+  --r-xl:30px;--r-lg:22px;--ease:cubic-bezier(.2,.7,.2,1);--pad:20px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--body);color:var(--ink);background:var(--bone);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}a{color:inherit;text-decoration:none}
+button,input,select{font:inherit;color:inherit}button{background:none;border:0;cursor:pointer}
+:focus-visible{outline:3px solid var(--tang);outline-offset:3px;border-radius:8px}
+.wrap{width:100%;max-width:1200px;margin:0 auto;padding:0 var(--pad)}
+h1,h2,h3{font-family:var(--display);font-weight:700;letter-spacing:-.035em;line-height:1}
+h1{font-size:clamp(2.900rem,12.500vw,5.800rem);line-height:.95}
+h2{font-size:clamp(2.100rem,8.200vw,3.900rem)}
+h3{font-size:1.4rem;letter-spacing:-.025em;line-height:1.12}
+.lead{font-size:1.08rem;color:var(--muted);max-width:34em}
+section{padding:72px 0}
+.sec-head{display:grid;gap:16px;margin-bottom:36px}
+.btn{display:inline-flex;align-items:center;justify-content:center;height:54px;padding:0 26px;border-radius:14px;font-weight:600;transition:transform .35s var(--ease),background .25s,box-shadow .3s;white-space:nowrap}
+.btn:active{transform:scale(.97)}
+.btn-cobalt{background:var(--cobalt);color:#fff}.btn-cobalt:hover{background:var(--cobalt-deep)}
+.btn-ink{background:var(--ink);color:#fff}.btn-ink:hover{background:#1c2040}
+.btn-white{background:#fff;color:var(--ink)}.btn-white:hover{background:var(--sky)}
+.btn-ghost{box-shadow:inset 0 0 0 1.500px var(--line)}.btn-ghost:hover{box-shadow:inset 0 0 0 1.500px var(--ink)}
+.btn-sm{height:44px;padding:0 18px;font-size:.95rem;border-radius:12px}
+
+.nav{position:fixed;inset:0 0 auto 0;z-index:50;padding:10px 0;transition:background .3s,box-shadow .3s}
+.nav.solid{background:rgba(244,242,236,.86);backdrop-filter:blur(16px) saturate(1.4);-webkit-backdrop-filter:blur(16px) saturate(1.4);box-shadow:0 1px 0 var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.logo{display:inline-flex;align-items:center;gap:9px;font-family:var(--display);font-weight:800;font-size:1.55rem;letter-spacing:-.05em}
+.logo svg{width:30px;height:30px}
+.nav-links{display:none;gap:30px;font-weight:500;font-size:.97rem}
+.nav-links a{opacity:.75;transition:opacity .2s}.nav-links a:hover{opacity:1}
+.nav-right{display:flex;align-items:center;gap:8px}
+.burger{width:44px;height:44px;border-radius:12px;background:#fff;display:grid;place-items:center}
+.burger span{display:block;width:18px;height:2px;background:var(--ink);border-radius:2px;transition:transform .35s var(--ease)}
+.burger span+span{margin-top:5px}
+.menu-open .burger span:first-child{transform:translateY(3.500px) rotate(45deg)}
+.menu-open .burger span:last-child{transform:translateY(-3.500px) rotate(-45deg)}
+.sheet{position:fixed;inset:0;z-index:40;background:var(--cobalt);color:#fff;padding:110px var(--pad) 40px;display:flex;flex-direction:column;gap:6px;transform:translateY(-102%);transition:transform .6s var(--ease);visibility:hidden}
+.menu-open .sheet{transform:none;visibility:visible}
+.sheet a{font-family:var(--display);font-size:2.4rem;font-weight:700;letter-spacing:-.035em;padding:8px 0}
+.sheet .btn{margin-top:auto;font-family:var(--body);font-size:1rem;letter-spacing:0}
+.menu-open .nav{background:transparent;box-shadow:none;backdrop-filter:none;-webkit-backdrop-filter:none}
+.menu-open .nav .logo{color:#fff}.menu-open .nav .logo .base{fill:#fff}.menu-open .nav .logo .eye{fill:var(--cobalt)}
+.menu-open .nav .btn{opacity:0;pointer-events:none}
+
+/* hero */
+.hero{padding:108px 0 30px}
+.hero-grid{display:grid;gap:34px}
+.hero-copy{display:grid;gap:22px;justify-items:start}
+.chip{display:inline-flex;align-items:center;gap:8px;background:#fff;border-radius:999px;padding:7px 14px 7px 8px;font-size:.88rem;font-weight:500}
+.chip i{font-style:normal;background:var(--tang);color:#fff;border-radius:999px;padding:2px 9px;font-size:.78rem;font-weight:600}
+.hero h1 .l{display:block;overflow:hidden;padding-bottom:.1em;margin-bottom:-.1em}
+.hero h1 .l>span{display:block;transform:translateY(105%);animation:rise 1s var(--ease) forwards}
+.hero h1 .l:nth-child(2)>span{animation-delay:.08s}.hero h1 .l:nth-child(3)>span{animation-delay:.16s}.hero h1 .l:nth-child(4)>span{animation-delay:.24s}
+.hero h1 .blue{color:var(--cobalt)}
+@keyframes rise{to{transform:none}}
+.fade{opacity:0;animation:fade .9s var(--ease) forwards}
+.d1{animation-delay:.4s}.d2{animation-delay:.5s}.d3{animation-delay:.6s}
+@keyframes fade{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+.cta-row{display:flex;flex-wrap:wrap;gap:10px}
+.micro{font-size:.9rem;color:var(--muted)}
+.hero-visual{position:relative;padding-bottom:70px}
+.hero-photo{border-radius:var(--r-xl);overflow:hidden;aspect-ratio:1/1.080;background:#2d7f93}
+.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 20%;transform:scale(1.08);animation:settle 1.600s var(--ease) forwards}
+@keyframes settle{to{transform:scale(1)}}
+.float{position:absolute;background:#fff;border-radius:18px;box-shadow:0 22px 50px -20px rgba(11,13,31,.4);opacity:0;animation:floatin .9s var(--ease) forwards}
+@keyframes floatin{from{opacity:0;transform:translateY(24px) scale(.96)}to{opacity:1;transform:none}}
+.f-pay{left:-6px;top:22px;padding:12px 16px 12px 12px;display:flex;align-items:center;gap:12px;animation-delay:1s}
+.f-pay .ic{width:40px;height:40px;border-radius:12px;background:#E3F8EA;display:grid;place-items:center}
+.f-pay b{display:block;font-size:.98rem;line-height:1.2}.f-pay small{color:var(--muted);font-size:.8rem}
+.f-bal{right:-4px;left:28px;bottom:0;background:var(--cobalt);color:#fff;padding:20px;animation-delay:.7s}
+.f-bal .row{display:flex;justify-content:space-between;align-items:center;font-size:.85rem;opacity:.8}
+.f-bal .amt{font-family:var(--display);font-weight:700;font-size:2.5rem;letter-spacing:-.04em;line-height:1.1;margin:6px 0 14px;font-variant-numeric:tabular-nums}
+.curs{display:flex;gap:6px;flex-wrap:wrap}
+.curs span{background:rgba(255,255,255,.14);border-radius:999px;padding:5px 11px;font-size:.8rem;font-weight:500}
+.curs span.on{background:#fff;color:var(--cobalt)}
+
+/* logos */
+.partners{padding:36px 0 10px}
+.partners p{text-align:center;font-size:.95rem;color:var(--muted);margin-bottom:22px;padding:0 var(--pad)}
+.marquee{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)}
+.track{display:flex;width:max-content;animation:slide 36s linear infinite}
+.track ul{display:flex;align-items:center;gap:54px;padding-right:54px;list-style:none}
+@keyframes slide{to{transform:translateX(-50%)}}
+.pl{display:flex;align-items:center;gap:10px;opacity:.72;white-space:nowrap;height:40px}
+.pl svg{height:28px;width:auto;flex:none}
+.pl-odd{font-family:var(--display);font-weight:800;font-size:1.45rem;letter-spacing:-.05em}
+.pl-marrow{font-family:"Newsreader",serif;font-weight:500;font-size:1.55rem;letter-spacing:-.02em}
+.pl-halvar{font-family:"Syne",sans-serif;font-weight:700;font-size:1.05rem;letter-spacing:.28em;text-transform:uppercase}
+.pl-kite{font-family:var(--body);font-weight:700;font-size:1.3rem;letter-spacing:-.04em}
+.pl-sable{font-family:"Newsreader",serif;font-style:italic;font-weight:500;font-size:1.6rem}
+.pl-bright{font-family:"Syne",sans-serif;font-weight:600;font-size:1.25rem;letter-spacing:-.02em}
+
+/* features */
+.grid{display:grid;gap:14px}
+.card{border-radius:var(--r-lg);padding:26px;background:#fff;position:relative;overflow:hidden}
+.card p{color:var(--muted);font-size:.98rem;margin-top:10px}
+.conv{background:var(--ink);color:#fff;display:grid;gap:26px}
+.conv p{color:rgba(255,255,255,.66)}
+.conv-ui{background:#fff;color:var(--ink);border-radius:18px;padding:18px;display:grid;gap:10px}
+.field{background:var(--bone);border-radius:14px;padding:12px 14px;display:grid;grid-template-columns:1fr auto;align-items:center;gap:4px 10px}
+.field label{grid-column:1/-1;font-size:.8rem;color:var(--muted);font-weight:500}
+.field input{border:0;background:none;font-family:var(--display);font-weight:700;font-size:1.9rem;letter-spacing:-.03em;width:100%;min-width:0;outline:none;font-variant-numeric:tabular-nums}
+.field output{font-family:var(--display);font-weight:700;font-size:1.9rem;letter-spacing:-.03em;color:var(--cobalt);font-variant-numeric:tabular-nums;overflow:hidden;text-overflow:ellipsis}
+.field select{border:0;background:#fff;border-radius:10px;padding:8px 10px;font-weight:600;font-size:.95rem}
+.lines{display:grid;gap:7px;font-size:.9rem;padding:6px 4px 2px}
+.lines div{display:flex;justify-content:space-between;gap:10px;color:var(--muted)}
+.lines div b{white-space:nowrap;color:var(--ink);font-weight:600;font-variant-numeric:tabular-nums}
+.lines .save{color:#0E8A4B;font-weight:600}.lines .save b{color:#0E8A4B}
+.conv .note{font-size:.78rem;color:var(--muted);padding:0 4px;margin-top:0}
+.c-sky{background:var(--sky)}
+.bal-list{display:grid;gap:8px;margin-top:22px}
+.bal{display:flex;align-items:center;gap:12px;background:#fff;border-radius:14px;padding:11px 14px;font-weight:600;font-variant-numeric:tabular-nums}
+.bal .fl{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;font-size:.72rem;font-weight:700;color:#fff;flex:none}
+.bal span{margin-left:auto}
+.bal small{display:block;font-weight:400;color:var(--muted);font-size:.78rem;line-height:1.1}
+.c-photo{padding:0;min-height:420px;display:flex;align-items:flex-end;color:#fff;background:var(--ink)}
+.c-photo>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1.200s var(--ease)}
+.c-photo:hover>img{transform:scale(1.04)}
+.c-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,13,31,0) 30%,rgba(11,13,31,.88) 100%)}
+.c-photo>div{position:relative;z-index:1;padding:26px}
+.c-photo p{color:rgba(255,255,255,.8)}
+.c-photo>.inv{position:absolute;z-index:2;top:18px;right:18px;background:#fff;color:var(--ink);border-radius:14px;padding:12px 14px;font-size:.84rem;min-width:180px;box-shadow:0 16px 40px -18px rgba(0,0,0,.5)}
+.inv b{display:block;font-family:var(--display);font-size:1.3rem;letter-spacing:-.03em}
+.inv i{font-style:normal;display:inline-block;margin-top:6px;background:#E3F8EA;color:#0E8A4B;font-weight:600;border-radius:999px;padding:3px 10px;font-size:.76rem}
+.c-tang{background:var(--tang);color:var(--ink)}.c-tang p{color:rgba(11,13,31,.72)}
+.vcard{margin-top:24px;aspect-ratio:1.586;border-radius:18px;background:linear-gradient(135deg,#0B0D1F 0%,#1c2260 100%);color:#fff;padding:18px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 24px 40px -22px rgba(11,13,31,.7);transform:rotate(-3deg);transition:transform .6s var(--ease);max-width:330px}
+.card:hover .vcard{transform:rotate(0)}
+.vcard .top{display:flex;justify-content:space-between;align-items:center;font-family:var(--display);font-weight:800;letter-spacing:-.04em;font-size:1.1rem}
+.vcard .chipset{width:38px;height:28px;border-radius:7px;background:linear-gradient(135deg,#f3d08a,#c99a3c)}
+.vcard .num{font-variant-numeric:tabular-nums;letter-spacing:.14em;font-size:.95rem;opacity:.9}
+.vcard .bot{display:flex;justify-content:space-between;font-size:.76rem;opacity:.75}
+
+/* steps */
+.how{background:var(--cobalt);color:#fff;border-radius:var(--r-xl)}
+.how .lead{color:rgba(255,255,255,.75)}
+.steps{display:grid;gap:14px;list-style:none}
+.step{background:rgba(255,255,255,.09);border-radius:var(--r-lg);padding:26px;display:grid;gap:10px;transition:background .5s,color .5s}
+.step .n{font-family:var(--display);font-weight:800;font-size:3.4rem;letter-spacing:-.05em;line-height:.9;color:var(--tang);transition:color .5s}
+.step p{color:rgba(255,255,255,.75);font-size:.98rem;transition:color .5s}
+.step.on{background:#fff;color:var(--ink)}.step.on p{color:var(--muted)}.step.on .n{color:var(--cobalt)}
+
+/* reviews */
+.rev-head{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:20px;margin-bottom:30px}
+.rail{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px var(--pad) 20px;margin:0 calc(var(--pad)*-1);scrollbar-width:none}
+.rail::-webkit-scrollbar{display:none}
+.rev{flex:0 0 84%;max-width:400px;scroll-snap-align:center;background:#fff;border-radius:var(--r-lg);padding:26px;display:flex;flex-direction:column;gap:22px}
+.rev.ink{background:var(--ink);color:#fff}.rev.ink .who span{color:rgba(255,255,255,.6)}
+.rev.sky{background:var(--sky)}
+.rev .big{font-family:var(--display);font-weight:800;font-size:2.6rem;letter-spacing:-.04em;line-height:1;color:var(--cobalt)}
+.rev.ink .big{color:var(--tang)}
+.rev blockquote{font-size:1.08rem;line-height:1.45}
+.who{display:flex;align-items:center;gap:12px;margin-top:auto}
+.who img{width:46px;height:46px;border-radius:50%;object-fit:cover}
+.who b{display:block;font-weight:600;font-size:.98rem;line-height:1.2}.who span{font-size:.86rem;color:var(--muted)}
+.rail-nav{display:none;gap:8px}
+.rail-nav button{width:48px;height:48px;border-radius:14px;background:#fff;display:grid;place-items:center;transition:background .25s}
+.rail-nav button:hover{background:var(--sky)}
+
+/* pricing */
+.toggle{display:inline-flex;background:#fff;border-radius:14px;padding:5px;position:relative;justify-self:start}
+.toggle button{position:relative;z-index:1;height:42px;padding:0 16px;border-radius:10px;font-weight:600;font-size:.92rem;color:var(--muted);transition:color .3s}
+.toggle button[aria-pressed=true]{color:#fff}
+.toggle .knob{position:absolute;top:5px;bottom:5px;left:5px;border-radius:10px;background:var(--ink);transition:transform .45s var(--ease),width .45s var(--ease)}
+.plans{display:grid;gap:14px}
+.plan{border-radius:var(--r-lg);padding:28px 26px;background:#fff;display:flex;flex-direction:column;gap:20px}
+.plan .for{font-size:.93rem;color:var(--muted);margin-top:6px}
+.price{display:flex;align-items:baseline;gap:8px}
+.price b{font-family:var(--display);font-size:3.6rem;font-weight:800;letter-spacing:-.05em;line-height:1;display:inline-block}
+.price b.swap{animation:swap .45s var(--ease)}@keyframes swap{from{opacity:0;transform:translateY(10px)}}
+.price span{font-size:.93rem;color:var(--muted)}
+.plan ul{list-style:none;display:grid;gap:11px;font-size:.97rem}
+.plan li{display:grid;grid-template-columns:20px 1fr;gap:10px}
+.plan li::before{content:"";width:18px;height:18px;margin-top:4px;border-radius:50%;background:var(--sky) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18' fill='none'%3E%3Cpath d='M5 9.500l2.700 2.700L13 6.500' stroke='%232338F5' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/cover}
+.plan .btn{margin-top:auto}
+.plan.hot{background:var(--ink);color:#fff}.plan.hot .for,.plan.hot .price span{color:rgba(255,255,255,.62)}
+.plan.hot li::before{background-color:var(--tang);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18' fill='none'%3E%3Cpath d='M5 9.500l2.700 2.700L13 6.500' stroke='%230B0D1F' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")}
+.badge{align-self:flex-start;background:var(--tang);color:var(--ink);font-size:.8rem;font-weight:600;padding:5px 12px;border-radius:999px;margin-bottom:-6px}
+.fine{font-size:.86rem;color:var(--muted);margin-top:22px}
+
+/* faq */
+.faq-grid{display:grid;gap:26px}
+.qa{border-top:1px solid var(--line)}
+.qa button{width:100%;display:flex;justify-content:space-between;align-items:center;gap:18px;text-align:left;padding:20px 0;font-family:var(--display);font-weight:700;font-size:1.16rem;letter-spacing:-.02em;line-height:1.2}
+.qa .pm{flex:none;width:34px;height:34px;border-radius:10px;background:#fff;position:relative;transition:background .3s,transform .5s var(--ease)}
+.qa .pm::before,.qa .pm::after{content:"";position:absolute;left:50%;top:50%;width:12px;height:2px;margin:-1px 0 0 -6px;background:var(--ink);border-radius:2px;transition:transform .45s var(--ease),background .3s}
+.qa .pm::after{transform:rotate(90deg)}
+.qa.open .pm{background:var(--cobalt);transform:rotate(180deg)}.qa.open .pm::before,.qa.open .pm::after{background:#fff}
+.qa.open .pm::after{transform:rotate(0)}
+.ans{display:grid;grid-template-rows:0fr;transition:grid-template-rows .5s var(--ease)}
+.qa.open .ans{grid-template-rows:1fr}.ans>div{overflow:hidden}
+.ans p{color:var(--muted);padding:0 44px 22px 0}
+
+/* final */
+.final{padding-top:0}
+.final-card{position:relative;border-radius:var(--r-xl);overflow:hidden;min-height:540px;display:flex;align-items:flex-end;color:#fff;background:var(--ink)}
+.final-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.final-card::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(21,38,184,.1) 10%,rgba(11,13,31,.92) 90%)}
+.final-card>div{position:relative;z-index:1;padding:30px 24px;display:grid;gap:18px;justify-items:start}
+.final-card p{color:rgba(255,255,255,.85);max-width:30em}
+
+footer{background:var(--ink);color:rgba(255,255,255,.68);padding:56px 0 28px;font-size:.95rem}
+.foot{display:grid;gap:36px}
+footer .logo{color:#fff}
+.foot-cols{display:grid;grid-template-columns:1fr 1fr;gap:30px 20px}
+.foot-cols h4{color:#fff;font-size:.95rem;font-weight:600;margin-bottom:12px}
+.foot-cols ul{list-style:none;display:grid;gap:9px}
+.foot-cols a:hover{color:#fff}
+.legal{border-top:1px solid rgba(255,255,255,.14);margin-top:40px;padding-top:22px;display:grid;gap:10px;font-size:.86rem}
+.legal a{color:var(--tang);font-weight:500;text-decoration:underline;text-underline-offset:4px}
+
+.rv{opacity:0;transform:translateY(22px);transition:opacity .9s var(--ease),transform .9s var(--ease);transition-delay:var(--d,0s)}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv{transform:none}}
+
+@media (min-width:720px){
+  :root{--pad:32px}
+  section{padding:104px 0}
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .conv,.c-photo{grid-column:span 2}
+  .conv{grid-template-columns:1fr 1fr;align-items:center;padding:40px;gap:40px}
+  .plans{grid-template-columns:repeat(3,1fr)}
+  .steps{grid-template-columns:repeat(3,1fr)}
+  .rev{flex-basis:380px}.rail-nav{display:flex}
+  .foot-cols{grid-template-columns:repeat(4,1fr)}
+  .final-card>div{padding:56px}
+  .legal{grid-template-columns:1fr auto;align-items:center}
+  .how{margin:0 16px}
+}
+@media (min-width:980px){
+  body{font-size:18px}
+  .nav-links{display:flex}.burger{display:none}
+  .hero{padding:150px 0 60px}
+  .hero-grid{grid-template-columns:1.100fr .9fr;align-items:center;gap:70px}
+  .f-pay{left:-50px;top:50px}.f-bal{left:-70px;right:60px}
+  .sec-head{grid-template-columns:1.100fr .9fr;align-items:end;gap:60px;margin-bottom:56px}
+  .grid{grid-template-columns:repeat(6,1fr);gap:18px}
+  .conv{grid-column:span 6}.c-sky{grid-column:span 2}.c-photo{grid-column:span 4;min-height:480px}
+  .c-tang{grid-column:span 3}.c-plain{grid-column:span 3}
+  .faq-grid{grid-template-columns:.8fr 1.200fr;gap:70px}
+  .final-card{min-height:600px}
+  .foot{grid-template-columns:1fr 1.600fr;gap:70px}
+  .pricing .sec-head{grid-template-columns:1fr auto}
+}
+</style>
+</head>
+<body>
+<header class="nav" id="nav"><div class="wrap">
+  <a class="logo" href="#top" aria-label="Plover home"><svg viewBox="0 0 32 32" aria-hidden="true"><circle class="base" cx="16" cy="16" r="16" fill="#2338F5"/><path d="M16 16L29 9.500A14 14 0 0129 22.500z" fill="#FF7A3D"/><circle class="eye" cx="13" cy="11" r="2.400" fill="#fff"/></svg>plover</a>
+  <nav class="nav-links" aria-label="Main"><a href="#features">Features</a><a href="#how">How it works</a><a href="#reviews">Reviews</a><a href="#pricing">Pricing</a><a href="#faq">Questions</a></nav>
+  <div class="nav-right"><a class="btn btn-ink btn-sm" href="#pricing">Open an account</a><button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><div><span></span><span></span></div></button></div>
+</div></header>
+<div class="sheet" id="sheet"><a href="#features">Features</a><a href="#how">How it works</a><a href="#reviews">Reviews</a><a href="#pricing">Pricing</a><a href="#faq">Questions</a><a class="btn btn-white" href="#pricing">Open an account</a></div>
+
+<main id="top">
+<section class="hero"><div class="wrap hero-grid">
+  <div class="hero-copy">
+    <span class="chip fade"><i>New</i>Invoices now settle in two days</span>
+    <h1><span class="l"><span>Get paid</span></span><span class="l"><span>from anywhere.</span></span><span class="l"><span class="blue">Keep more</span></span><span class="l"><span class="blue">of it.</span></span></h1>
+    <p class="lead fade d1">Plover gives freelancers and small studios local account details in 9 currencies, invoices clients love to pay and conversion at the real rate.</p>
+    <div class="cta-row fade d2"><a class="btn btn-cobalt" href="#pricing">Open a free account</a><a class="btn btn-ghost" href="#convert">Try the calculator</a></div>
+    <p class="micro fade d3">Free to open. No monthly minimum. Set up in about 6 minutes.</p>
+  </div>
+  <div class="hero-visual fade d1">
+    <div class="hero-photo"><img src="/fintech/img/hero.jpg" alt="A freelancer laughing in front of a blue wall" width="1000" height="1200"></div>
+    <div class="float f-pay"><span class="ic"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 4v12M5 11l5 5 5-5" stroke="#0E8A4B" stroke-width="2.200" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><b>+ €2,400.00</b><small>Halvar Studio paid invoice 0042</small></div></div>
+    <div class="float f-bal"><div class="row"><span>Total balance</span><span>Updated just now</span></div><div class="amt" id="amt">$18,240.55</div><div class="curs"><span class="on">USD</span><span>EUR</span><span>GBP</span><span>CAD</span><span>AUD</span><span>+4</span></div></div>
+  </div>
+</div></section>
+
+<section class="partners" aria-label="Customers"><p>Independent teams at these companies run their money on Plover</p>
+  <div class="marquee"><div class="track" id="track"><ul>
+    <li class="pl pl-odd"><svg viewBox="0 0 30 30" fill="currentColor" aria-hidden="true"><circle cx="10" cy="15" r="10"/><circle cx="23" cy="15" r="7" opacity=".45"/></svg>oddfield</li>
+    <li class="pl pl-marrow"><svg viewBox="0 0 30 30" fill="none" stroke="currentColor" stroke-width="2.400" stroke-linecap="round" aria-hidden="true"><path d="M3 26V8l12 12L27 8v18"/><path d="M9 4h12" opacity=".5"/></svg>Marrowline</li>
+    <li class="pl pl-halvar"><svg viewBox="0 0 30 30" fill="currentColor" aria-hidden="true"><path d="M2 2h7v10h12V2h7v26h-7V18H9v10H2z"/></svg>Halvar</li>
+    <li class="pl pl-kite"><svg viewBox="0 0 30 30" fill="currentColor" aria-hidden="true"><path d="M15 1l11 11-11 17L4 12z"/><path d="M15 1v28" stroke="#F4F2EC" stroke-width="1.600"/><path d="M4 12h22" stroke="#F4F2EC" stroke-width="1.600"/></svg>Kitewing</li>
+    <li class="pl pl-sable"><svg viewBox="0 0 30 30" fill="none" stroke="currentColor" stroke-width="2.400" stroke-linecap="round" aria-hidden="true"><path d="M22 7c-2-3-12-3.500-12 3 0 6 12 4 12 10.500 0 6-11 6-14 2"/></svg>Sable &amp; Ash</li>
+    <li class="pl pl-bright"><svg viewBox="0 0 30 30" fill="currentColor" aria-hidden="true"><rect x="2" y="2" width="11" height="11" rx="5.500"/><rect x="17" y="2" width="11" height="11" rx="2" opacity=".45"/><rect x="2" y="17" width="11" height="11" rx="2" opacity=".45"/><rect x="17" y="17" width="11" height="11" rx="5.500"/></svg>Brightloom</li>
+  </ul></div></div>
+</section>
+
+<section id="features"><div class="wrap">
+  <div class="sec-head rv"><h2>One account for every client, wherever they are.</h2><p class="lead">Stop losing a slice of every invoice to slow transfers and hidden rates. Plover shows you the exact number before the money moves.</p></div>
+  <div class="grid">
+    <article class="card conv rv" id="convert">
+      <div><h3 style="font-size:1.9rem">Know what lands before you send the invoice</h3><p>Type an amount and pick where you want it. One flat fee of 0.6%, the real exchange rate and nothing tucked into the spread.</p></div>
+      <div class="conv-ui">
+        <div class="field"><label for="amt-in">Your client pays</label><input id="amt-in" inputmode="decimal" value="2,500" autocomplete="off"><select id="cur-in" aria-label="Client currency"><option>USD</option><option>EUR</option><option>GBP</option></select></div>
+        <div class="field"><label for="cur-out">You receive</label><output id="amt-out">0</output><select id="cur-out" aria-label="Your currency"><option>EUR</option><option>GBP</option><option>USD</option><option>CAD</option><option>AUD</option></select></div>
+        <div class="lines"><div>Plover fee (0.6%)<b id="l-fee"></b></div><div>Exchange rate<b id="l-rate"></b></div><div class="save">You keep more than with a typical bank<b id="l-save"></b></div></div>
+        <p class="note">Example rates for this demo, not live market data.</p>
+      </div>
+    </article>
+    <article class="card c-sky rv">
+      <h3>Local details in 9 currencies</h3><p>Clients pay you like a local supplier, with no international wire on their side.</p>
+      <div class="bal-list">
+        <div class="bal"><i class="fl" style="background:#2338F5">$</i><div>US dollar<small>Routing and account number</small></div><span>12,480.20</span></div>
+        <div class="bal"><i class="fl" style="background:#0B0D1F">€</i><div>Euro<small>IBAN</small></div><span>3,910.00</span></div>
+        <div class="bal"><i class="fl" style="background:#FF7A3D">£</i><div>British pound<small>Sort code</small></div><span>1,204.75</span></div>
+      </div>
+    </article>
+    <article class="card c-photo rv" style="--d:.08s">
+      <img src="/fintech/img/shop.jpg" alt="A shop owner taking a payment at the counter" loading="lazy" width="1200" height="900">
+      <div class="inv">Invoice 0042<b>€2,400.00</b><i>Paid in 2 days</i></div>
+      <div><h3 style="font-size:1.8rem">Invoices clients pay faster</h3><p>Send a link, they pay by card or bank transfer in their own currency. Gentle reminders go out for you, so you never have to chase.</p></div>
+    </article>
+    <article class="card c-tang rv">
+      <h3>A card that spends from any balance</h3><p>Pay for tools and travel straight from the currency you hold. Freeze it in one tap.</p>
+      <div class="vcard"><div class="top"><span>plover</span><span class="chipset"></span></div><div class="num">•••• •••• •••• 4417</div><div class="bot"><span>Studio card</span><span>09 / 29</span></div></div>
+    </article>
+    <article class="card c-plain rv" style="--d:.08s">
+      <h3>Tax time, already sorted</h3><p>Every payment is tagged by client and currency. Export a clean statement for your accountant in two taps.</p>
+      <div class="bal-list">
+        <div class="bal" style="background:var(--bone)"><div>Set aside for tax<small>Automatic, 22% of each payment</small></div><span>$4,012.92</span></div>
+        <div class="bal" style="background:var(--bone)"><div>Paid this quarter<small>14 invoices, 6 clients</small></div><span>$18,240.55</span></div>
+      </div>
+    </article>
+  </div>
+</div></section>
+
+<section class="how" id="how"><div class="wrap">
+  <div class="sec-head rv"><h2>From sign up to first payment in an afternoon.</h2><p class="lead">No branch visits and no paperwork in the post.</p></div>
+  <ol class="steps">
+    <li class="step rv"><span class="n">1</span><h3>Open your account</h3><p>Answer a few questions and verify your ID from your phone. Most accounts are approved in under 6 minutes.</p></li>
+    <li class="step rv" style="--d:.08s"><span class="n">2</span><h3>Share your details or an invoice</h3><p>Copy local account details for any of 9 currencies, or send a branded invoice with a pay link.</p></li>
+    <li class="step rv" style="--d:.16s"><span class="n">3</span><h3>Get paid and move it your way</h3><p>Hold it, convert it at the real rate, spend it on your card or send it to your bank the same day.</p></li>
+  </ol>
+</div></section>
+
+<section id="reviews"><div class="wrap">
+  <div class="rev-head rv"><h2>Kinder to your margins.</h2><div class="rail-nav"><button id="prev" aria-label="Previous reviews"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="#0B0D1F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 3.500L5.500 9l5.500 5.500"/></svg></button><button id="next" aria-label="Next reviews"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="#0B0D1F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3.500L12.500 9 7 14.500"/></svg></button></div></div>
+  <div class="rail rv" id="rail">
+    <figure class="rev"><span class="big">$3,100</span><blockquote>That is what I saved in fees last year compared with my old bank. Same clients, same invoices, more money.</blockquote><figcaption class="who"><img src="/fintech/img/p1.jpg" alt="" loading="lazy" width="46" height="46"><div><b>Idris Calloway</b><span>Motion designer</span></div></figcaption></figure>
+    <figure class="rev ink"><span class="big">2 days</span><blockquote>My average time to get paid dropped from eleven days to two. The pay link does the nagging so I do not have to.</blockquote><figcaption class="who"><img src="/fintech/img/p2.jpg" alt="" loading="lazy" width="46" height="46"><div><b>Lena Maristo</b><span>Brand strategist</span></div></figcaption></figure>
+    <figure class="rev sky"><span class="big">9 currencies</span><blockquote>We bill clients on three continents. Giving each one local details made us look ten times bigger than we are.</blockquote><figcaption class="who"><img src="/fintech/img/p3.jpg" alt="" loading="lazy" width="46" height="46"><div><b>Mateo Brandt</b><span>Founder, two person studio</span></div></figcaption></figure>
+    <figure class="rev"><span class="big">Zero</span><blockquote>Surprises on my statement since I switched. The calculator number is the number that arrives, every time.</blockquote><figcaption class="who"><img src="/fintech/img/p4.jpg" alt="" loading="lazy" width="46" height="46"><div><b>Odile Ferran</b><span>Consultant</span></div></figcaption></figure>
+    <figure class="rev ink"><span class="big">6 minutes</span><blockquote>I opened the account on a train and sent my first invoice before my stop. I kept waiting for the catch.</blockquote><figcaption class="who"><img src="/fintech/img/p5.jpg" alt="" loading="lazy" width="46" height="46"><div><b>Samir Kessane</b><span>Product developer</span></div></figcaption></figure>
+  </div>
+</div></section>
+
+<section class="pricing" id="pricing" style="padding-top:0"><div class="wrap">
+  <div class="sec-head rv"><div style="display:grid;gap:16px"><h2>Simple plans. Honest fees.</h2><p class="lead">Start free and upgrade when your client list grows.</p></div>
+    <div class="toggle" id="toggle" role="group" aria-label="Billing period"><span class="knob"></span><button data-p="m" aria-pressed="true">Monthly</button><button data-p="y" aria-pressed="false">Yearly, save 20%</button></div></div>
+  <div class="plans">
+    <div class="plan rv"><div><h3>Solo</h3><p class="for">For getting your first clients paid.</p></div><div class="price"><b>$0</b><span>forever</span></div><ul><li>Local details in 3 currencies</li><li>5 invoices a month</li><li>0.9% conversion fee</li><li>Virtual card</li></ul><a class="btn btn-ghost" href="#top">Open a free account</a></div>
+    <div class="plan hot rv" style="--d:.08s"><span class="badge">Most popular</span><div><h3>Pro</h3><p class="for">For full time freelancers.</p></div><div class="price"><b data-m="$14" data-y="$11">$14</b><span>per month</span></div><ul><li>Local details in all 9 currencies</li><li>Unlimited invoices and reminders</li><li>0.6% conversion fee</li><li>Automatic tax pot</li><li>Same day payouts</li></ul><a class="btn btn-cobalt" href="#top">Start with Pro</a></div>
+    <div class="plan rv" style="--d:.16s"><div><h3>Studio</h3><p class="for">For small teams of up to 10.</p></div><div class="price"><b data-m="$39" data-y="$31">$39</b><span>per month</span></div><ul><li>Everything in Pro</li><li>Team cards with spending limits</li><li>0.4% conversion fee</li><li>Accounting exports and roles</li><li>Priority human support</li></ul><a class="btn btn-ink" href="#top">Start with Studio</a></div>
+  </div>
+  <p class="fine rv">Yearly prices are shown per month and billed once a year. Cancel whenever you like.</p>
+</div></section>
+
+<section id="faq" style="padding-top:0"><div class="wrap faq-grid">
+  <div class="rv" style="display:grid;gap:16px;align-content:start"><h2>Questions, answered plainly.</h2><p class="lead">Need a human? Our support team replies in under 4 minutes on average, every day of the week.</p></div>
+  <div class="rv">
+    <div class="qa open"><button aria-expanded="true">Is my money safe with Plover?<span class="pm"></span></button><div class="ans"><div><p>Customer funds are held separately from our own in safeguarded accounts at regulated partner banks. We never lend your money out.</p></div></div></div>
+    <div class="qa"><button aria-expanded="false">What does it really cost?<span class="pm"></span></button><div class="ans"><div><p>Receiving money is free. Converting it costs one flat fee, shown before you confirm. Sending to your own bank is free on every plan.</p></div></div></div>
+    <div class="qa"><button aria-expanded="false">Which currencies can I hold?<span class="pm"></span></button><div class="ans"><div><p>US dollars, euros, British pounds, Canadian and Australian dollars, Swiss francs, yen, Singapore dollars and New Zealand dollars.</p></div></div></div>
+    <div class="qa"><button aria-expanded="false">How long do payouts take?<span class="pm"></span></button><div class="ans"><div><p>Pro and Studio payouts arrive the same working day. Solo payouts arrive the next working day.</p></div></div></div>
+    <div class="qa"><button aria-expanded="false">Can I use Plover without a registered company?<span class="pm"></span></button><div class="ans"><div><p>Yes. You can open an account as an individual and add a company later without changing your account details.</p></div></div></div>
+    <div class="qa"><button aria-expanded="false">Does it work with my accounting tool?<span class="pm"></span></button><div class="ans"><div><p>Plover exports clean statements in the formats accountants ask for, and Studio adds a live feed to the most common bookkeeping apps.</p></div></div></div>
+  </div>
+</div></section>
+
+<section class="final"><div class="wrap"><div class="final-card rv">
+  <img src="/fintech/img/team.jpg" alt="Two colleagues celebrating at a desk" loading="lazy" width="1400" height="900">
+  <div><h2>Your next invoice could land in two days.</h2><p>Open a free account in about 6 minutes and send your first pay link today.</p><a class="btn btn-white" href="#pricing">Open a free account</a></div>
+</div></div></section>
+</main>
+
+<footer><div class="wrap">
+  <div class="foot">
+    <div style="display:grid;gap:16px;align-content:start"><a class="logo" href="#top"><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="16" fill="#2338F5"/><path d="M16 16L29 9.500A14 14 0 0129 22.500z" fill="#FF7A3D"/><circle cx="13" cy="11" r="2.400" fill="#fff"/></svg>plover</a><p style="max-width:26em">Money tools for people who work for themselves and bill the whole world.</p></div>
+    <div class="foot-cols">
+      <div><h4>Product</h4><ul><li><a href="#features">Accounts</a></li><li><a href="#features">Invoices</a></li><li><a href="#features">Cards</a></li><li><a href="#convert">Calculator</a></li></ul></div>
+      <div><h4>Company</h4><ul><li><a href="#how">How it works</a></li><li><a href="#reviews">Reviews</a></li><li><a href="#pricing">Pricing</a></li><li><a href="#faq">Questions</a></li></ul></div>
+      <div><h4>Support</h4><ul><li>Help centre</li><li>Security</li><li>Status</li><li>help@plover.example</li></ul></div>
+      <div><h4>Legal</h4><ul><li>Terms</li><li>Privacy</li><li>Fees</li></ul></div>
+    </div>
+  </div>
+  <div class="legal"><span>© 2026 Plover. A fictional brand, not a real financial service. Photos from Unsplash.</span><span><a href="https://thedavelement.vercel.app" target="_blank" rel="noopener">Concept project by Dave</a></span></div>
+</div></footer>
+
+<script>
+(function(){
+  var $=function(s,r){return (r||document).querySelector(s)},$$=function(s,r){return [].slice.call((r||document).querySelectorAll(s))};
+  var body=document.body,nav=$('#nav');
+  var onS=function(){nav.classList.toggle('solid',scrollY>12)};onS();addEventListener('scroll',onS,{passive:true});
+  var burger=$('#burger');function setMenu(o){body.classList.toggle('menu-open',o);burger.setAttribute('aria-expanded',o);body.style.overflow=o?'hidden':''}
+  burger.addEventListener('click',function(){setMenu(!body.classList.contains('menu-open'))});$$('#sheet a').forEach(function(a){a.addEventListener('click',function(){setMenu(false)})});
+
+  // balance count up
+  var amt=$('#amt'),target=18240.55,t0=null;function fmt(n,d){return n.toLocaleString('en-US',{minimumFractionDigits:d,maximumFractionDigits:d})}
+  function tick(ts){if(!t0)t0=ts;var p=Math.min(1,(ts-t0)/1600),e=1-Math.pow(1-p,4);amt.textContent='$'+fmt(15840.55+(target-15840.55)*e,2);if(p<1)requestAnimationFrame(tick)}
+  setTimeout(function(){requestAnimationFrame(tick)},1100);
+
+  // converter
+  var USD={USD:1,EUR:.92,GBP:.79,CAD:1.37,AUD:1.52},SYM={USD:'$',EUR:'€',GBP:'£',CAD:'C$',AUD:'A$'};
+  var ai=$('#amt-in'),ci=$('#cur-in'),co=$('#cur-out'),ao=$('#amt-out');
+  function calc(){var v=parseFloat(ai.value.replace(/[^0-9.]/g,''))||0,rate=USD[co.value]/USD[ci.value],fee=v*.006,got=(v-fee)*rate,bank=v*(1-.035)*rate;
+    ao.textContent=SYM[co.value]+fmt(got,2);$('#l-fee').textContent=SYM[ci.value]+fmt(fee,2);$('#l-rate').textContent='1 '+ci.value+' = '+rate.toFixed(4)+' '+co.value;$('#l-save').textContent='+ '+SYM[co.value]+fmt(Math.max(0,got-bank),2)}
+  ai.addEventListener('input',calc);ci.addEventListener('change',calc);co.addEventListener('change',calc);
+  ai.addEventListener('blur',function(){var v=parseFloat(ai.value.replace(/[^0-9.]/g,''))||0;ai.value=fmt(v,0)});calc();
+
+  var track=$('#track'),c=$('ul',track).cloneNode(true);c.setAttribute('aria-hidden','true');track.appendChild(c);
+
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px',threshold:.08});$$('.rv').forEach(function(el){io.observe(el)});
+    var so=new IntersectionObserver(function(es){es.forEach(function(e){e.target.classList.toggle('on',e.isIntersecting)})},{rootMargin:'-40% 0px -40% 0px'});
+    if(matchMedia('(max-width:719px)').matches)$$('.step').forEach(function(el){so.observe(el)});else $$('.step')[1].classList.add('on');
+  }else $$('.rv').forEach(function(el){el.classList.add('in')});
+
+  var rail=$('#rail');function step(d){rail.scrollBy({left:d*($('.rev',rail).getBoundingClientRect().width+14),behavior:'smooth'})}
+  $('#prev').addEventListener('click',function(){step(-1)});$('#next').addEventListener('click',function(){step(1)});
+
+  var tg=$('#toggle'),knob=$('.knob',tg),tbs=$$('button',tg);
+  function setP(b){tbs.forEach(function(x){x.setAttribute('aria-pressed',x===b)});knob.style.width=b.offsetWidth+'px';knob.style.transform='translateX('+(b.offsetLeft-5)+'px)';var p=b.dataset.p;
+    $$('[data-m]').forEach(function(el){var v=el.dataset[p];if(el.textContent!==v){el.textContent=v;el.classList.remove('swap');void el.offsetWidth;el.classList.add('swap')}})}
+  tbs.forEach(function(b){b.addEventListener('click',function(){setP(b)})});function ik(){setP($('[aria-pressed=true]',tg))}ik();addEventListener('resize',ik);if(document.fonts&&document.fonts.ready)document.fonts.ready.then(ik);
+
+  $$('.qa').forEach(function(q){$('button',q).addEventListener('click',function(){var o=!q.classList.contains('open');$$('.qa').forEach(function(x){x.classList.remove('open');$('button',x).setAttribute('aria-expanded','false')});if(o){q.classList.add('open');this.setAttribute('aria-expanded','true')}})});
+})();
+</script>
+</body>
+</html>
