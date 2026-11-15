@@ -1,1 +1,29 @@
-{ "trailingSlash": true }
+{
+  "trailingSlash": true,
+  "rewrites": [
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "orvelle-dental.vercel.app"
+        }
+      ],
+      "destination": "/clinic/index.html"
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "ravelo-ai.vercel.app"
+        }
+      ],
+      "destination": "/ai/index.html"
+    },
+    {
+      "source": "/",
+      "destination": "/home/index.html"
+    }
+  ]
+}
