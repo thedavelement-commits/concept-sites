@@ -3,442 +3,496 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Plover | Get paid from anywhere</title>
-<meta name="description" content="Plover gives freelancers and small studios local account details in 9 currencies, fast invoices and fair conversion. A concept project by Dave.">
-<meta name="theme-color" content="#2338F5">
+<title>Plover | Global pay for independent work</title>
+<meta name="description" content="Plover gives freelancers and small studios local account details in 9 currencies, smart invoices and conversion at the real rate. A concept project by Dave.">
+<meta name="theme-color" content="#DDD6FF">
 <meta property="og:title" content="Plover">
-<meta property="og:description" content="Get paid from anywhere and keep more of it.">
-<meta property="og:image" content="/fintech/img/hero.jpg">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%232338F5'/%3E%3Cpath d='M16 16L29 9.500A14 14 0 0129 22.500z' fill='%23FF7A3D'/%3E%3Ccircle cx='13' cy='11' r='2.400' fill='%23fff'/%3E%3C/svg%3E">
+<meta property="og:description" content="Global pay for independent work.">
+<meta property="og:image" content="/fintech/img/intro.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='12' cy='16' r='10' fill='%2322105E'/%3E%3Cpath d='M18 16l12-7v14z' fill='%2322105E'/%3E%3Ccircle cx='10' cy='13' r='2.200' fill='%23DDD6FF'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@400..800&family=Onest:wght@400..700&family=Newsreader:ital,opsz,wght@0,6..72,500;1,6..72,500&family=Syne:wght@600;700&display=swap" rel="stylesheet">
-<link rel="preload" as="image" href="/fintech/img/hero.jpg">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,500;1,6..72,500&family=Syne:wght@600;700&display=swap" rel="stylesheet">
 <style>
-:root{
-  --cobalt:#2338F5;--cobalt-deep:#1526B8;--ink:#0B0D1F;--bone:#F4F2EC;--bone-2:#E9E6DC;--tang:#FF7A3D;--sky:#DCE3FF;--white:#fff;
-  --muted:#5C6078;--line:rgba(11,13,31,.12);
-  --display:"Funnel Display",system-ui,sans-serif;--body:"Onest",system-ui,sans-serif;
-  --r-xl:30px;--r-lg:22px;--ease:cubic-bezier(.2,.7,.2,1);--pad:20px;
-}
+:root{--lav:#DDD6FF;--deep:#22105E;--ink:#1D170B;--grey:#606060;--pan:#F4F6F4;--dg:#0D261E;--mint:#CDEED3;--olive:#455200;--lime:#F8FFD1;--navy:#000552;--peri:#D1D4FE;--ease:cubic-bezier(.2,.7,.2,1);--pad:20px}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{font-family:var(--body);color:var(--ink);background:var(--bone);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body{font-family:"Geist",system-ui,sans-serif;color:var(--ink);background:#fff;font-size:16px;line-height:1.48;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 img{display:block;max-width:100%}a{color:inherit;text-decoration:none}
 button,input,select{font:inherit;color:inherit}button{background:none;border:0;cursor:pointer}
-:focus-visible{outline:3px solid var(--tang);outline-offset:3px;border-radius:8px}
-.wrap{width:100%;max-width:1200px;margin:0 auto;padding:0 var(--pad)}
-h1,h2,h3{font-family:var(--display);font-weight:700;letter-spacing:-.035em;line-height:1}
-h1{font-size:clamp(2.900rem,12.500vw,5.800rem);line-height:.95}
-h2{font-size:clamp(2.100rem,8.200vw,3.900rem)}
-h3{font-size:1.4rem;letter-spacing:-.025em;line-height:1.12}
-.lead{font-size:1.08rem;color:var(--muted);max-width:34em}
+:focus-visible{outline:2px solid var(--deep);outline-offset:3px;border-radius:8px}
+.wrap{width:100%;max-width:1360px;margin:0 auto;padding:0 var(--pad)}
+h1{font-weight:500;font-size:clamp(2.600rem,11vw,4.500rem);letter-spacing:-.02em;line-height:1.1;color:var(--deep)}
+h2{font-weight:400;font-size:clamp(2.050rem,8.400vw,3.250rem);letter-spacing:-.04em;line-height:1.08}
+h3{font-weight:500;font-size:1.375rem;letter-spacing:-.02em;line-height:1.25}
+p{color:var(--grey)}
 section{padding:72px 0}
-.sec-head{display:grid;gap:16px;margin-bottom:36px}
-.btn{display:inline-flex;align-items:center;justify-content:center;height:54px;padding:0 26px;border-radius:14px;font-weight:600;transition:transform .35s var(--ease),background .25s,box-shadow .3s;white-space:nowrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;height:46px;padding:0 24px;border-radius:8px;font-size:.84rem;font-weight:500;white-space:nowrap;transition:background .25s,transform .3s var(--ease),color .25s}
 .btn:active{transform:scale(.97)}
-.btn-cobalt{background:var(--cobalt);color:#fff}.btn-cobalt:hover{background:var(--cobalt-deep)}
-.btn-ink{background:var(--ink);color:#fff}.btn-ink:hover{background:#1c2040}
-.btn-white{background:#fff;color:var(--ink)}.btn-white:hover{background:var(--sky)}
-.btn-ghost{box-shadow:inset 0 0 0 1.500px var(--line)}.btn-ghost:hover{box-shadow:inset 0 0 0 1.500px var(--ink)}
-.btn-sm{height:44px;padding:0 18px;font-size:.95rem;border-radius:12px}
+.btn-d{background:var(--deep);color:#fff}.btn-d:hover{background:#34198a}
+.btn-o{border:1px solid var(--deep);color:var(--deep);background:#fff}.btn-o:hover{background:var(--lav)}
+.btn-l{background:var(--lav);color:var(--deep)}.btn-l:hover{background:#fff}
+.btn-s{height:40px;padding:0 18px}
 
-.nav{position:fixed;inset:0 0 auto 0;z-index:50;padding:10px 0;transition:background .3s,box-shadow .3s}
-.nav.solid{background:rgba(244,242,236,.86);backdrop-filter:blur(16px) saturate(1.4);-webkit-backdrop-filter:blur(16px) saturate(1.4);box-shadow:0 1px 0 var(--line)}
-.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px}
-.logo{display:inline-flex;align-items:center;gap:9px;font-family:var(--display);font-weight:800;font-size:1.55rem;letter-spacing:-.05em}
-.logo svg{width:30px;height:30px}
-.nav-links{display:none;gap:30px;font-weight:500;font-size:.97rem}
-.nav-links a{opacity:.75;transition:opacity .2s}.nav-links a:hover{opacity:1}
-.nav-right{display:flex;align-items:center;gap:8px}
-.burger{width:44px;height:44px;border-radius:12px;background:#fff;display:grid;place-items:center}
-.burger span{display:block;width:18px;height:2px;background:var(--ink);border-radius:2px;transition:transform .35s var(--ease)}
-.burger span+span{margin-top:5px}
-.menu-open .burger span:first-child{transform:translateY(3.500px) rotate(45deg)}
-.menu-open .burger span:last-child{transform:translateY(-3.500px) rotate(-45deg)}
-.sheet{position:fixed;inset:0;z-index:40;background:var(--cobalt);color:#fff;padding:110px var(--pad) 40px;display:flex;flex-direction:column;gap:6px;transform:translateY(-102%);transition:transform .6s var(--ease);visibility:hidden}
-.menu-open .sheet{transform:none;visibility:visible}
-.sheet a{font-family:var(--display);font-size:2.4rem;font-weight:700;letter-spacing:-.035em;padding:8px 0}
-.sheet .btn{margin-top:auto;font-family:var(--body);font-size:1rem;letter-spacing:0}
-.menu-open .nav{background:transparent;box-shadow:none;backdrop-filter:none;-webkit-backdrop-filter:none}
-.menu-open .nav .logo{color:#fff}.menu-open .nav .logo .base{fill:#fff}.menu-open .nav .logo .eye{fill:var(--cobalt)}
-.menu-open .nav .btn{opacity:0;pointer-events:none}
+/* nav */
+.nav{position:fixed;inset:0 0 auto 0;z-index:50;padding:10px var(--pad);pointer-events:none}
+.bar{pointer-events:auto;max-width:1320px;margin:0 auto;height:56px;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:0 10px 0 14px;border-radius:12px;border:1px solid transparent;transition:max-width .6s var(--ease),background .4s,border-color .4s,box-shadow .4s}
+.nav.solid .bar{max-width:820px;background:rgba(255,255,255,.86);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-color:rgba(34,16,94,.1);box-shadow:0 10px 30px -18px rgba(34,16,94,.35)}
+.logo{display:inline-flex;align-items:center;gap:7px;font-weight:500;font-size:1.35rem;letter-spacing:-.04em;color:var(--deep)}
+.logo svg{width:26px;height:26px}
+.links{display:none;gap:34px;font-size:.84rem;color:var(--deep)}.links a{opacity:.85}.links a:hover{opacity:1}
+.nr{display:flex;gap:8px;align-items:center}.nr .btn-o{display:none}
+.burger{width:40px;height:40px;border-radius:8px;display:grid;place-items:center;background:rgba(255,255,255,.6)}
+.burger span{display:block;width:16px;height:1.500px;background:var(--deep);transition:transform .35s var(--ease)}.burger span+span{margin-top:5px}
+.mo .burger span:first-child{transform:translateY(3.250px) rotate(45deg)}.mo .burger span:last-child{transform:translateY(-3.250px) rotate(-45deg)}
+.sheet{position:fixed;inset:0;z-index:49;background:var(--lav);padding:96px var(--pad) 32px;display:flex;flex-direction:column;transform:translateY(-102%);transition:transform .6s var(--ease);visibility:hidden}
+.mo .sheet{transform:none;visibility:visible}
+.sheet a:not(.btn){font-size:2rem;letter-spacing:-.03em;color:var(--deep);padding:10px 0}
+.sheet .btn{margin-top:auto;height:52px}
 
 /* hero */
-.hero{padding:108px 0 30px}
-.hero-grid{display:grid;gap:34px}
-.hero-copy{display:grid;gap:22px;justify-items:start}
-.chip{display:inline-flex;align-items:center;gap:8px;background:#fff;border-radius:999px;padding:7px 14px 7px 8px;font-size:.88rem;font-weight:500}
-.chip i{font-style:normal;background:var(--tang);color:#fff;border-radius:999px;padding:2px 9px;font-size:.78rem;font-weight:600}
-.hero h1 .l{display:block;overflow:hidden;padding-bottom:.1em;margin-bottom:-.1em}
-.hero h1 .l>span{display:block;transform:translateY(105%);animation:rise 1s var(--ease) forwards}
-.hero h1 .l:nth-child(2)>span{animation-delay:.08s}.hero h1 .l:nth-child(3)>span{animation-delay:.16s}.hero h1 .l:nth-child(4)>span{animation-delay:.24s}
-.hero h1 .blue{color:var(--cobalt)}
-@keyframes rise{to{transform:none}}
-.fade{opacity:0;animation:fade .9s var(--ease) forwards}
-.d1{animation-delay:.4s}.d2{animation-delay:.5s}.d3{animation-delay:.6s}
-@keyframes fade{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
-.cta-row{display:flex;flex-wrap:wrap;gap:10px}
-.micro{font-size:.9rem;color:var(--muted)}
-.hero-visual{position:relative;padding-bottom:70px}
-.hero-photo{border-radius:var(--r-xl);overflow:hidden;aspect-ratio:1/1.080;background:#2d7f93}
-.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 20%;transform:scale(1.08);animation:settle 1.600s var(--ease) forwards}
-@keyframes settle{to{transform:scale(1)}}
-.float{position:absolute;background:#fff;border-radius:18px;box-shadow:0 22px 50px -20px rgba(11,13,31,.4);opacity:0;animation:floatin .9s var(--ease) forwards}
-@keyframes floatin{from{opacity:0;transform:translateY(24px) scale(.96)}to{opacity:1;transform:none}}
-.f-pay{left:-6px;top:22px;padding:12px 16px 12px 12px;display:flex;align-items:center;gap:12px;animation-delay:1s}
-.f-pay .ic{width:40px;height:40px;border-radius:12px;background:#E3F8EA;display:grid;place-items:center}
-.f-pay b{display:block;font-size:.98rem;line-height:1.2}.f-pay small{color:var(--muted);font-size:.8rem}
-.f-bal{right:-4px;left:28px;bottom:0;background:var(--cobalt);color:#fff;padding:20px;animation-delay:.7s}
-.f-bal .row{display:flex;justify-content:space-between;align-items:center;font-size:.85rem;opacity:.8}
-.f-bal .amt{font-family:var(--display);font-weight:700;font-size:2.5rem;letter-spacing:-.04em;line-height:1.1;margin:6px 0 14px;font-variant-numeric:tabular-nums}
-.curs{display:flex;gap:6px;flex-wrap:wrap}
-.curs span{background:rgba(255,255,255,.14);border-radius:999px;padding:5px 11px;font-size:.8rem;font-weight:500}
-.curs span.on{background:#fff;color:var(--cobalt)}
+.hero{background:var(--lav);padding:120px 0 0;overflow:hidden}
+.hg{display:grid;gap:20px}
+.hc{display:grid;gap:22px;justify-items:start}
+.hc p{color:var(--deep);max-width:22em;font-size:1rem}
+.trust{display:flex;align-items:center;gap:14px;font-size:.92rem;color:var(--deep);line-height:1.3}
+.trust div{display:flex}.trust img{width:38px;height:38px;border-radius:50%;object-fit:cover;border:2px solid var(--lav);margin-left:-12px}.trust img:first-child{margin-left:0}
+.up{opacity:0;transform:translateY(16px);animation:up .9s var(--ease) forwards}.u1{animation-delay:.1s}.u2{animation-delay:.2s}.u3{animation-delay:.3s}
+@keyframes up{to{opacity:1;transform:none}}
+.iso{position:relative;height:400px;max-width:520px;width:100%;margin:0 auto}
+.iso>*{position:absolute;animation:bobf 6s ease-in-out infinite}
+@keyframes bobf{50%{translate:0 -10px}}
+.i-card{left:38%;top:6%;width:150px;height:300px;border-radius:14px;background:linear-gradient(160deg,#2d1680,#1a0b4d);transform:skewY(-28deg);box-shadow:-18px 28px 40px -14px rgba(34,16,94,.45);color:#fff;padding:14px 12px;display:flex;flex-direction:column;justify-content:space-between;font-size:.6rem;letter-spacing:.14em}
+.i-card b{writing-mode:vertical-rl;font-weight:400;font-size:.82rem;letter-spacing:.16em;align-self:flex-end}
+.i-card i{width:22px;height:22px;border-radius:50%;background:#FF8A5B;box-shadow:12px 0 0 rgba(255,200,90,.9);align-self:flex-end;margin-right:12px}
+.i-a,.i-b{background:#fff;border-radius:14px;padding:12px 14px;transform:skewY(28deg);box-shadow:14px 24px 34px -16px rgba(34,16,94,.4);font-size:.62rem;color:var(--grey)}
+.i-a{left:4%;top:44%;width:180px;animation-delay:-2s}
+.i-b{right:0;top:8%;width:150px;animation-delay:-4s}
+.i-a b,.i-b b{display:block;color:var(--ink);font-size:1.05rem;font-weight:500;letter-spacing:-.02em}
+.i-a span,.i-b span{display:inline-block;margin-top:8px;background:var(--mint);color:var(--dg);border-radius:99px;padding:3px 10px;font-weight:500}
+.i-b span{background:var(--dg);color:#fff}
+.i-p{left:26%;bottom:4%;background:#fff;border-radius:99px;padding:9px 9px 9px 16px;font-size:.74rem;color:var(--deep);font-weight:500;display:flex;align-items:center;gap:10px;box-shadow:0 14px 30px -14px rgba(34,16,94,.5);animation-delay:-1s}
+.i-p i{width:28px;height:28px;border-radius:50%;background:var(--deep);display:grid;place-items:center}
+.mq{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)}
+.tr{display:flex;width:max-content;animation:sl 34s linear infinite}
+.tr ul{display:flex;align-items:center;list-style:none}
+@keyframes sl{to{transform:translateX(-50%)}}
+.hero .mq{padding:26px 0 30px;color:var(--deep)}
+.hero .tr ul{gap:56px;padding-right:56px}
+.lg{display:flex;align-items:center;gap:9px;white-space:nowrap;font-size:1.3rem;font-weight:600;letter-spacing:-.03em;opacity:.78}
+.lg svg{height:24px;width:auto}
+.lg.s1{font-family:"Syne",sans-serif;font-weight:700}.lg.s2{font-family:"Newsreader",serif;font-style:italic;font-weight:500;font-size:1.5rem}.lg.s3{letter-spacing:.2em;text-transform:uppercase;font-size:1rem}.lg.s4{font-family:"Newsreader",serif;font-weight:500;font-size:1.45rem}
 
-/* logos */
-.partners{padding:36px 0 10px}
-.partners p{text-align:center;font-size:.95rem;color:var(--muted);margin-bottom:22px;padding:0 var(--pad)}
-.marquee{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)}
-.track{display:flex;width:max-content;animation:slide 36s linear infinite}
-.track ul{display:flex;align-items:center;gap:54px;padding-right:54px;list-style:none}
-@keyframes slide{to{transform:translateX(-50%)}}
-.pl{display:flex;align-items:center;gap:10px;opacity:.72;white-space:nowrap;height:40px}
-.pl svg{height:28px;width:auto;flex:none}
-.pl-odd{font-family:var(--display);font-weight:800;font-size:1.45rem;letter-spacing:-.05em}
-.pl-marrow{font-family:"Newsreader",serif;font-weight:500;font-size:1.55rem;letter-spacing:-.02em}
-.pl-halvar{font-family:"Syne",sans-serif;font-weight:700;font-size:1.05rem;letter-spacing:.28em;text-transform:uppercase}
-.pl-kite{font-family:var(--body);font-weight:700;font-size:1.3rem;letter-spacing:-.04em}
-.pl-sable{font-family:"Newsreader",serif;font-style:italic;font-weight:500;font-size:1.6rem}
-.pl-bright{font-family:"Syne",sans-serif;font-weight:600;font-size:1.25rem;letter-spacing:-.02em}
+/* intro */
+.sh{display:grid;gap:14px;margin-bottom:32px}
+.sh p{font-size:.84rem;max-width:26em}
+.tri{display:grid;gap:14px}
+.tc{border-radius:24px;min-height:420px;position:relative;overflow:hidden;padding:24px}
+.tc.ph{padding:0;background:#b7c8e8}
+.tc.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1.200s var(--ease)}.tc.ph:hover img{transform:scale(1.04)}
+.balc{position:absolute;left:50%;bottom:22px;transform:translateX(-50%);width:min(78%,250px);background:#fff;border-radius:14px;padding:14px 16px;box-shadow:0 20px 40px -20px rgba(0,0,0,.4)}
+.balc small{color:var(--grey);font-size:.68rem;display:flex;justify-content:space-between;align-items:center}
+.balc small i{width:26px;height:26px;border-radius:50%;background:var(--mint)}
+.balc b{display:block;font-size:1.6rem;font-weight:500;letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+.balc div{display:flex;gap:8px;margin-top:10px}
+.balc span{flex:1;text-align:center;font-size:.72rem;font-weight:500;border-radius:99px;padding:8px 0;border:1px solid var(--dg);color:var(--dg)}
+.balc span:first-child{background:var(--dg);color:#fff}
+.tc.dk{background:var(--dg);color:#fff;display:flex;flex-direction:column}
+.tc.dk .ic{width:34px;height:34px;border-radius:50%;background:var(--mint);display:grid;place-items:center;margin-bottom:22px}
+.tc.dk p{color:rgba(255,255,255,.82);font-size:.84rem;margin-top:auto}
+.tc.dk .pillb{margin-top:18px;background:var(--mint);color:var(--dg);border-radius:99px;height:46px;display:flex;align-items:center;justify-content:center;font-size:.84rem;font-weight:500;position:relative}
+.tc.dk .pillb i{position:absolute;right:4px;top:4px;width:38px;height:38px;border-radius:50%;background:var(--dg);display:grid;place-items:center}
+.tc.lt{background:var(--pan)}
+.tc.lt p{font-size:.84rem;margin-top:10px}
+.chartc{position:absolute;left:24px;right:24px;bottom:24px;background:#fff;border-radius:16px;padding:16px;box-shadow:0 0 0 8px rgba(255,255,255,.5)}
+.chartc small{display:flex;justify-content:space-between;font-size:1rem;font-weight:500;color:var(--ink)}.chartc small em{font-style:normal;font-size:.6rem;font-weight:400;background:var(--pan);border-radius:99px;padding:3px 9px;color:var(--grey)}
+.chartc b{font-size:1.6rem;font-weight:500;letter-spacing:-.03em}.chartc b span{font-size:.62rem;background:var(--mint);color:var(--dg);border-radius:99px;padding:2px 7px;margin-left:8px;vertical-align:middle;letter-spacing:0}
+.bars{display:flex;gap:8px;align-items:flex-end;height:110px;margin-top:12px}
+.bars i{flex:1;border-radius:99px;background:repeating-linear-gradient(135deg,#eef0ee 0 3px,#f8f9f8 3px 6px);height:0;transition:height 1.200s var(--ease);transition-delay:calc(var(--i)*70ms)}
+.bars i.on{background:var(--dg)}
+.in .bars i{height:var(--h)}
 
-/* features */
-.grid{display:grid;gap:14px}
-.card{border-radius:var(--r-lg);padding:26px;background:#fff;position:relative;overflow:hidden}
-.card p{color:var(--muted);font-size:.98rem;margin-top:10px}
-.conv{background:var(--ink);color:#fff;display:grid;gap:26px}
-.conv p{color:rgba(255,255,255,.66)}
-.conv-ui{background:#fff;color:var(--ink);border-radius:18px;padding:18px;display:grid;gap:10px}
-.field{background:var(--bone);border-radius:14px;padding:12px 14px;display:grid;grid-template-columns:1fr auto;align-items:center;gap:4px 10px}
-.field label{grid-column:1/-1;font-size:.8rem;color:var(--muted);font-weight:500}
-.field input{border:0;background:none;font-family:var(--display);font-weight:700;font-size:1.9rem;letter-spacing:-.03em;width:100%;min-width:0;outline:none;font-variant-numeric:tabular-nums}
-.field output{font-family:var(--display);font-weight:700;font-size:1.9rem;letter-spacing:-.03em;color:var(--cobalt);font-variant-numeric:tabular-nums;overflow:hidden;text-overflow:ellipsis}
-.field select{border:0;background:#fff;border-radius:10px;padding:8px 10px;font-weight:600;font-size:.95rem}
-.lines{display:grid;gap:7px;font-size:.9rem;padding:6px 4px 2px}
-.lines div{display:flex;justify-content:space-between;gap:10px;color:var(--muted)}
-.lines div b{white-space:nowrap;color:var(--ink);font-weight:600;font-variant-numeric:tabular-nums}
-.lines .save{color:#0E8A4B;font-weight:600}.lines .save b{color:#0E8A4B}
-.conv .note{font-size:.78rem;color:var(--muted);padding:0 4px;margin-top:0}
-.c-sky{background:var(--sky)}
-.bal-list{display:grid;gap:8px;margin-top:22px}
-.bal{display:flex;align-items:center;gap:12px;background:#fff;border-radius:14px;padding:11px 14px;font-weight:600;font-variant-numeric:tabular-nums}
-.bal .fl{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;font-size:.72rem;font-weight:700;color:#fff;flex:none}
-.bal span{margin-left:auto}
-.bal small{display:block;font-weight:400;color:var(--muted);font-size:.78rem;line-height:1.1}
-.c-photo{padding:0;min-height:420px;display:flex;align-items:flex-end;color:#fff;background:var(--ink)}
-.c-photo>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1.200s var(--ease)}
-.c-photo:hover>img{transform:scale(1.04)}
-.c-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,13,31,0) 30%,rgba(11,13,31,.88) 100%)}
-.c-photo>div{position:relative;z-index:1;padding:26px}
-.c-photo p{color:rgba(255,255,255,.8)}
-.c-photo>.inv{position:absolute;z-index:2;top:18px;right:18px;background:#fff;color:var(--ink);border-radius:14px;padding:12px 14px;font-size:.84rem;min-width:180px;box-shadow:0 16px 40px -18px rgba(0,0,0,.5)}
-.inv b{display:block;font-family:var(--display);font-size:1.3rem;letter-spacing:-.03em}
-.inv i{font-style:normal;display:inline-block;margin-top:6px;background:#E3F8EA;color:#0E8A4B;font-weight:600;border-radius:999px;padding:3px 10px;font-size:.76rem}
-.c-tang{background:var(--tang);color:var(--ink)}.c-tang p{color:rgba(11,13,31,.72)}
-.vcard{margin-top:24px;aspect-ratio:1.586;border-radius:18px;background:linear-gradient(135deg,#0B0D1F 0%,#1c2260 100%);color:#fff;padding:18px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 24px 40px -22px rgba(11,13,31,.7);transform:rotate(-3deg);transition:transform .6s var(--ease);max-width:330px}
-.card:hover .vcard{transform:rotate(0)}
-.vcard .top{display:flex;justify-content:space-between;align-items:center;font-family:var(--display);font-weight:800;letter-spacing:-.04em;font-size:1.1rem}
-.vcard .chipset{width:38px;height:28px;border-radius:7px;background:linear-gradient(135deg,#f3d08a,#c99a3c)}
-.vcard .num{font-variant-numeric:tabular-nums;letter-spacing:.14em;font-size:.95rem;opacity:.9}
-.vcard .bot{display:flex;justify-content:space-between;font-size:.76rem;opacity:.75}
+/* sticky features */
+.stk{display:grid;gap:20px}
+.side{display:none}
+.panels{display:grid;gap:64px}
+.pn .box{background:var(--pan);border-radius:24px;padding:22px 16px;min-height:300px;display:grid;place-items:center;margin-bottom:24px;overflow:hidden}
+.pn .lab{display:inline-block;font-size:.74rem;font-weight:500;color:var(--deep);background:var(--lav);border-radius:99px;padding:5px 12px;margin-bottom:14px}
+.pn p{font-size:.84rem;max-width:30em;margin:10px 0 20px}
+.ui{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;align-items:center;width:100%}
+.w{background:#fff;border-radius:14px;padding:16px;box-shadow:0 14px 34px -22px rgba(13,38,30,.35);font-size:.74rem;color:var(--grey);width:100%;max-width:270px}
+.w b{color:var(--ink);font-weight:500}
+.bank{width:100%;max-width:290px;aspect-ratio:1.586;border-radius:14px;background:var(--dg);color:#fff;padding:18px;display:flex;flex-direction:column;justify-content:space-between;font-size:.86rem;letter-spacing:.06em}
+.bank .t{display:flex;justify-content:space-between;align-items:center}.bank .logo{color:#fff;font-size:1.1rem;letter-spacing:-.04em}.bank .logo svg{width:20px;height:20px}
+.bank .num{font-size:1.05rem;letter-spacing:.12em;font-variant-numeric:tabular-nums}
+.big{font-size:1.5rem;letter-spacing:-.03em;display:block;margin:2px 0}
+.big span{font-size:.62rem;background:var(--mint);color:var(--dg);border-radius:99px;padding:2px 7px;margin-left:6px;vertical-align:middle;letter-spacing:0}
+.mons{display:flex;justify-content:space-between;font-size:.62rem;margin-top:6px}.mons i{font-style:normal}.mons i.on{background:var(--mint);color:var(--dg);border-radius:99px;padding:1px 7px}
+.cv .f{background:var(--pan);border-radius:10px;padding:9px 11px;display:grid;grid-template-columns:1fr auto;gap:2px 8px;align-items:center;margin-top:8px}
+.cv .f label{grid-column:1/-1;font-size:.64rem}
+.cv input,.cv output{border:0;background:none;outline:0;font-size:1.25rem;font-weight:500;letter-spacing:-.02em;color:var(--ink);width:100%;min-width:0;font-variant-numeric:tabular-nums}
+.cv select{border:0;background:#fff;border-radius:99px;padding:5px 8px;font-size:.72rem;font-weight:500;color:var(--ink)}
+.cv .ln{display:flex;justify-content:space-between;margin-top:8px;font-size:.68rem}.cv .ln b{font-variant-numeric:tabular-nums;white-space:nowrap}.cv .ln.g,.cv .ln.g b{color:#0E8A4B}
+.li{display:flex;align-items:center;gap:10px;padding:9px 0;border-top:1px solid #eef0ee}.li:first-of-type{border-top:0}
+.li i{width:28px;height:28px;border-radius:50%;background:var(--lav);flex:none;display:grid;place-items:center;font-style:normal;font-size:.62rem;font-weight:600;color:var(--deep)}
+.li em{margin-left:auto;font-style:normal;font-weight:500;font-size:.66rem;border-radius:99px;padding:2px 8px;background:var(--mint);color:var(--dg);white-space:nowrap}
+.li em.w8{background:var(--lime);color:var(--olive)}
+.ring{width:150px;height:150px;border-radius:50%;background:conic-gradient(var(--dg) 0 94%,#e6ebe6 94% 100%);display:grid;place-items:center;margin:4px auto 0}
+.ring div{width:116px;height:116px;border-radius:50%;background:#fff;display:grid;place-items:center;text-align:center;font-size:.62rem;line-height:1.3}
+.ring b{display:block;font-size:1.6rem;letter-spacing:-.03em}
+.tabsm{display:flex;gap:4px;font-size:.62rem;margin-bottom:6px}.tabsm i{font-style:normal;padding:2px 8px;border-radius:5px}.tabsm i.on{background:var(--dg);color:#fff}
 
-/* steps */
-.how{background:var(--cobalt);color:#fff;border-radius:var(--r-xl)}
-.how .lead{color:rgba(255,255,255,.75)}
-.steps{display:grid;gap:14px;list-style:none}
-.step{background:rgba(255,255,255,.09);border-radius:var(--r-lg);padding:26px;display:grid;gap:10px;transition:background .5s,color .5s}
-.step .n{font-family:var(--display);font-weight:800;font-size:3.4rem;letter-spacing:-.05em;line-height:.9;color:var(--tang);transition:color .5s}
-.step p{color:rgba(255,255,255,.75);font-size:.98rem;transition:color .5s}
-.step.on{background:#fff;color:var(--ink)}.step.on p{color:var(--muted)}.step.on .n{color:var(--cobalt)}
+/* carousel */
+.car{padding-bottom:20px}
+.car .tr{animation-duration:44s}.car .tr ul{gap:14px;padding-right:14px}
+.car .mq{-webkit-mask-image:none;mask-image:none}
+.pc{width:250px;border-radius:24px;overflow:hidden;display:flex;flex-direction:column}
+.car .tr ul{align-items:stretch}.pc{flex:none}.pc img{width:100%;height:300px;object-fit:cover;flex:none}
+.pc span{padding:18px 20px 20px;color:#fff;font-size:1.02rem;font-weight:500;letter-spacing:-.02em}
 
-/* reviews */
-.rev-head{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:20px;margin-bottom:30px}
-.rail{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px var(--pad) 20px;margin:0 calc(var(--pad)*-1);scrollbar-width:none}
-.rail::-webkit-scrollbar{display:none}
-.rev{flex:0 0 84%;max-width:400px;scroll-snap-align:center;background:#fff;border-radius:var(--r-lg);padding:26px;display:flex;flex-direction:column;gap:22px}
-.rev.ink{background:var(--ink);color:#fff}.rev.ink .who span{color:rgba(255,255,255,.6)}
-.rev.sky{background:var(--sky)}
-.rev .big{font-family:var(--display);font-weight:800;font-size:2.6rem;letter-spacing:-.04em;line-height:1;color:var(--cobalt)}
-.rev.ink .big{color:var(--tang)}
-.rev blockquote{font-size:1.08rem;line-height:1.45}
-.who{display:flex;align-items:center;gap:12px;margin-top:auto}
-.who img{width:46px;height:46px;border-radius:50%;object-fit:cover}
-.who b{display:block;font-weight:600;font-size:.98rem;line-height:1.2}.who span{font-size:.86rem;color:var(--muted)}
-.rail-nav{display:none;gap:8px}
-.rail-nav button{width:48px;height:48px;border-radius:14px;background:#fff;display:grid;place-items:center;transition:background .25s}
-.rail-nav button:hover{background:var(--sky)}
+/* capabilities */
+.cap{display:grid;gap:14px}
+.cc{background:var(--pan);border-radius:24px;padding:24px;min-height:400px;position:relative;overflow:hidden}
+.cc p{font-size:.84rem;margin-top:8px;max-width:24em}
+.cc.a img{position:absolute;right:-20px;bottom:0;height:68%;width:auto;border-radius:24px 0 0 0;object-fit:cover}
+.bub{position:absolute;left:20px;bottom:24px;display:grid;gap:10px;width:210px;font-size:.66rem}
+.bub div{background:#fff;border-radius:14px;padding:10px 12px;box-shadow:0 12px 30px -18px rgba(0,0,0,.4)}.bub b{display:block;color:var(--ink);font-size:.7rem}
+.bub div+div{margin-left:26px}
+.don{position:absolute;right:20px;left:20px;bottom:20px;background:#fff;border-radius:16px;padding:16px;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.don svg{width:110px;height:110px;flex:none;transform:rotate(-90deg)}
+.don circle{fill:none;stroke-width:9;stroke-linecap:round;transition:stroke-dashoffset 1.600s var(--ease)}
+.chips{position:absolute;left:24px;bottom:150px;display:grid;gap:6px;justify-items:start;z-index:1}
+.chips span{font-size:.7rem;font-weight:500;border-radius:99px;padding:5px 11px;background:var(--lime);color:var(--olive)}
+.chips span+span{background:#fff;color:var(--ink);margin-left:16px;box-shadow:0 6px 16px -8px rgba(0,0,0,.3)}.chips span+span+span{background:var(--dg);color:#fff;margin-left:32px}
+.net{position:absolute;inset:auto 0 0 0;height:72%}
+.net svg{width:100%;height:100%}
+.net path{fill:none;stroke:#b9bfb9;stroke-width:1.200;stroke-dasharray:4 4;animation:dash 1.500s linear infinite}
+@keyframes dash{to{stroke-dashoffset:-16}}
+.stack{position:absolute;right:-30px;bottom:-60px;width:250px;height:300px}
+.stack i{position:absolute;inset:0;border-radius:16px;transform-origin:bottom right;transition:transform .8s var(--ease)}
+.stack i:nth-child(1){background:var(--dg);transform:rotate(-40deg)}.stack i:nth-child(2){background:var(--olive);transform:rotate(-32deg)}
+.stack i:nth-child(3){background:linear-gradient(160deg,#34198a,var(--deep));transform:rotate(-24deg);color:#fff;font-style:normal;padding:22px;font-size:.7rem}
+.stack i b{display:block;font-size:1.5rem;font-weight:400;letter-spacing:-.02em;margin-top:60px;line-height:1.1}
+.cc:hover .stack i:nth-child(1){transform:rotate(-46deg)}.cc:hover .stack i:nth-child(3){transform:rotate(-18deg)}
+
+/* tiers */
+.rail{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 calc(var(--pad)*-1);padding:0 var(--pad) 6px;scrollbar-width:none}.rail::-webkit-scrollbar{display:none}
+.tier{flex:0 0 68%;max-width:330px;scroll-snap-align:center}
+.tv{aspect-ratio:.68;border-radius:20px;color:#fff;padding:20px;display:flex;justify-content:space-between;align-items:flex-end;position:relative;transition:transform .6s var(--ease)}
+.tier:hover .tv{transform:translateY(-8px)}
+.tv::before{content:"";position:absolute;right:20px;top:20px;width:20px;height:20px;border-radius:50%;background:#FF8A5B;box-shadow:-12px 0 0 rgba(255,200,90,.9)}
+.tv b{writing-mode:vertical-rl;transform:rotate(180deg);font-weight:400;letter-spacing:.14em;font-size:.92rem}
+.tv span{writing-mode:vertical-rl;transform:rotate(180deg);font-size:1.25rem;letter-spacing:.14em;font-variant-numeric:tabular-nums}
+.tier h3{font-size:1.125rem;letter-spacing:.02em;text-transform:uppercase;margin:18px 0 6px}
+.tier p{font-size:.84rem;max-width:18em}
+
+/* tabs */
+.tb{display:grid;gap:26px}
+.tl{display:grid;gap:6px}
+.tl button{text-align:left;font-size:1.125rem;font-weight:500;letter-spacing:-.02em;padding:11px 14px;border-radius:8px;color:#b9b9b9;transition:color .3s,background .3s}
+.tl button[aria-selected=true]{background:var(--pan);color:var(--ink)}
+.tt p{font-size:.84rem;max-width:26em;margin-bottom:20px;min-height:4.500em}
+.tp{border-radius:24px;overflow:hidden;position:relative;aspect-ratio:4/3.600;background:var(--lav)}
+.tp img{width:100%;height:100%;object-fit:cover}
+.tp .w{position:absolute;left:16px;top:50%;transform:translateY(-50%);max-width:190px;transition:opacity .35s,transform .5s var(--ease)}
+.tp .w.sw{opacity:0;transform:translateY(-40%)}
 
 /* pricing */
-.toggle{display:inline-flex;background:#fff;border-radius:14px;padding:5px;position:relative;justify-self:start}
-.toggle button{position:relative;z-index:1;height:42px;padding:0 16px;border-radius:10px;font-weight:600;font-size:.92rem;color:var(--muted);transition:color .3s}
-.toggle button[aria-pressed=true]{color:#fff}
-.toggle .knob{position:absolute;top:5px;bottom:5px;left:5px;border-radius:10px;background:var(--ink);transition:transform .45s var(--ease),width .45s var(--ease)}
 .plans{display:grid;gap:14px}
-.plan{border-radius:var(--r-lg);padding:28px 26px;background:#fff;display:flex;flex-direction:column;gap:20px}
-.plan .for{font-size:.93rem;color:var(--muted);margin-top:6px}
-.price{display:flex;align-items:baseline;gap:8px}
-.price b{font-family:var(--display);font-size:3.6rem;font-weight:800;letter-spacing:-.05em;line-height:1;display:inline-block}
-.price b.swap{animation:swap .45s var(--ease)}@keyframes swap{from{opacity:0;transform:translateY(10px)}}
-.price span{font-size:.93rem;color:var(--muted)}
-.plan ul{list-style:none;display:grid;gap:11px;font-size:.97rem}
-.plan li{display:grid;grid-template-columns:20px 1fr;gap:10px}
-.plan li::before{content:"";width:18px;height:18px;margin-top:4px;border-radius:50%;background:var(--sky) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18' fill='none'%3E%3Cpath d='M5 9.500l2.700 2.700L13 6.500' stroke='%232338F5' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/cover}
-.plan .btn{margin-top:auto}
-.plan.hot{background:var(--ink);color:#fff}.plan.hot .for,.plan.hot .price span{color:rgba(255,255,255,.62)}
-.plan.hot li::before{background-color:var(--tang);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18' fill='none'%3E%3Cpath d='M5 9.500l2.700 2.700L13 6.500' stroke='%230B0D1F' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")}
-.badge{align-self:flex-start;background:var(--tang);color:var(--ink);font-size:.8rem;font-weight:600;padding:5px 12px;border-radius:999px;margin-bottom:-6px}
-.fine{font-size:.86rem;color:var(--muted);margin-top:22px}
+.pl{background:var(--pan);border-radius:24px;padding:26px 22px}
+.pl h3{font-size:1.25rem}
+.pr{font-size:2rem;font-weight:500;letter-spacing:-.03em;margin:14px 0 12px;display:flex;align-items:baseline;gap:6px}.pr span{font-size:.74rem;font-weight:400;letter-spacing:0}
+.pl>p{font-size:.84rem;min-height:3em;max-width:20em}
+.pl .btn{width:100%;margin:18px 0 22px}
+.pl h4{font-weight:500;font-size:1rem;margin-bottom:14px}
+.pl ul{list-style:none;display:grid;gap:12px;font-size:.88rem}
+.pl li{display:flex;gap:10px;align-items:center}
+.pl li::before{content:"";width:16px;height:16px;border-radius:50%;flex:none;background:var(--deep) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M4.500 8.300l2.300 2.300 4.700-5' stroke='%23fff' stroke-width='1.500' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/cover}
+.pl.hot{background:var(--deep);color:#fff}.pl.hot>p{color:rgba(255,255,255,.8)}
+.pl.hot li::before{background-color:var(--lav);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M4.500 8.300l2.300 2.300 4.700-5' stroke='%2322105E' stroke-width='1.500' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")}
+
+/* testimonials */
+.th{display:grid;gap:22px;margin-bottom:40px}
+.rate{font-size:.84rem;font-weight:500}.rate small{display:block;font-weight:400;color:#b9b9b9;font-size:.7rem;margin-top:4px}.rate svg{vertical-align:-2px;margin:0 3px 0 6px}
+.th p{font-size:.84rem;max-width:28em;margin-top:12px}
+.ts{display:grid;gap:22px}
+.tph{position:relative;width:min(100%,300px);aspect-ratio:1;border-radius:20px;overflow:hidden;background:var(--pan)}
+.tph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.06);transition:opacity .6s,transform .9s var(--ease)}.tph img.on{opacity:1;transform:none}
+.who{margin-top:14px;font-size:.92rem;font-weight:500}.who span{display:block;font-weight:400;font-size:.74rem;color:var(--grey)}
+.tq blockquote{font-size:clamp(1.250rem,5.200vw,1.500rem);line-height:1.35;letter-spacing:-.01em;min-height:6.800em;transition:opacity .35s,transform .5s var(--ease)}
+.tq blockquote.sw{opacity:0;transform:translateY(10px)}
+.arr{display:flex;gap:8px;margin-top:20px}.arr button{width:44px;height:44px;border-radius:8px;background:var(--deep);display:grid;place-items:center;transition:background .25s}.arr button:hover{background:#34198a}
+.prog{height:2px;background:var(--lav);margin:40px 0 30px;position:relative}.prog i{position:absolute;left:0;top:0;bottom:0;width:33.330%;background:var(--deep);transition:left .6s var(--ease)}
+.nums{display:grid;gap:22px}
+.nums b{display:block;font-weight:400;font-size:2.6rem;letter-spacing:-.04em;line-height:1.1}.nums span{font-size:.8rem;color:var(--grey)}
+
+/* blog */
+.bh{display:flex;justify-content:space-between;align-items:flex-end;gap:14px;flex-wrap:wrap;margin-bottom:28px}
+.bl{display:grid;gap:14px}
+.bc{position:relative;border-radius:24px;overflow:hidden;aspect-ratio:1/1.150;color:#fff;display:block}
+.bc img{width:100%;height:100%;object-fit:cover;transition:transform 1.200s var(--ease)}.bc:hover img{transform:scale(1.05)}
+.bc::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(34,16,94,.7) 0%,rgba(34,16,94,0) 45%)}
+.bc div{position:absolute;z-index:1;left:20px;right:20px;top:18px}
+.bc small{font-size:.7rem;opacity:.9;display:flex;gap:14px}.bc b{display:block;font-weight:500;font-size:1.2rem;letter-spacing:-.02em;margin-top:6px}
 
 /* faq */
-.faq-grid{display:grid;gap:26px}
-.qa{border-top:1px solid var(--line)}
-.qa button{width:100%;display:flex;justify-content:space-between;align-items:center;gap:18px;text-align:left;padding:20px 0;font-family:var(--display);font-weight:700;font-size:1.16rem;letter-spacing:-.02em;line-height:1.2}
-.qa .pm{flex:none;width:34px;height:34px;border-radius:10px;background:#fff;position:relative;transition:background .3s,transform .5s var(--ease)}
-.qa .pm::before,.qa .pm::after{content:"";position:absolute;left:50%;top:50%;width:12px;height:2px;margin:-1px 0 0 -6px;background:var(--ink);border-radius:2px;transition:transform .45s var(--ease),background .3s}
-.qa .pm::after{transform:rotate(90deg)}
-.qa.open .pm{background:var(--cobalt);transform:rotate(180deg)}.qa.open .pm::before,.qa.open .pm::after{background:#fff}
-.qa.open .pm::after{transform:rotate(0)}
-.ans{display:grid;grid-template-rows:0fr;transition:grid-template-rows .5s var(--ease)}
-.qa.open .ans{grid-template-rows:1fr}.ans>div{overflow:hidden}
-.ans p{color:var(--muted);padding:0 44px 22px 0}
+.fqg{display:grid;gap:24px;margin-top:32px}
+.fqi{border-radius:24px;overflow:hidden;aspect-ratio:4/3;background:var(--lav)}.fqi img{width:100%;height:100%;object-fit:cover}
+.qa{border-bottom:1px solid #e6e6e6}
+.qa button{width:100%;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 0;text-align:left;font-size:1.06rem;font-weight:500;letter-spacing:-.01em}
+.qa button i{flex:none;width:28px;height:28px;border-radius:50%;background:var(--pan);position:relative;transition:background .3s,transform .5s var(--ease)}
+.qa button i::before,.qa button i::after{content:"";position:absolute;left:50%;top:50%;width:10px;height:1.500px;margin:-.75px 0 0 -5px;background:var(--ink);transition:transform .4s var(--ease),background .3s}
+.qa button i::after{transform:rotate(90deg)}
+.qa.on button i{background:var(--deep);transform:rotate(180deg)}.qa.on button i::before,.qa.on button i::after{background:#fff}.qa.on button i::after{transform:none}
+.an{display:grid;grid-template-rows:0fr;transition:grid-template-rows .45s var(--ease)}.qa.on .an{grid-template-rows:1fr}.an>div{overflow:hidden}
+.an p{font-size:.88rem;padding:0 40px 20px 0}
 
-/* final */
-.final{padding-top:0}
-.final-card{position:relative;border-radius:var(--r-xl);overflow:hidden;min-height:540px;display:flex;align-items:flex-end;color:#fff;background:var(--ink)}
-.final-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.final-card::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(21,38,184,.1) 10%,rgba(11,13,31,.92) 90%)}
-.final-card>div{position:relative;z-index:1;padding:30px 24px;display:grid;gap:18px;justify-items:start}
-.final-card p{color:rgba(255,255,255,.85);max-width:30em}
-
-footer{background:var(--ink);color:rgba(255,255,255,.68);padding:56px 0 28px;font-size:.95rem}
-.foot{display:grid;gap:36px}
-footer .logo{color:#fff}
-.foot-cols{display:grid;grid-template-columns:1fr 1fr;gap:30px 20px}
-.foot-cols h4{color:#fff;font-size:.95rem;font-weight:600;margin-bottom:12px}
-.foot-cols ul{list-style:none;display:grid;gap:9px}
-.foot-cols a:hover{color:#fff}
-.legal{border-top:1px solid rgba(255,255,255,.14);margin-top:40px;padding-top:22px;display:grid;gap:10px;font-size:.86rem}
-.legal a{color:var(--tang);font-weight:500;text-decoration:underline;text-underline-offset:4px}
+/* end */
+.end{background:var(--pan);padding:72px 0 28px;margin-top:20px}
+.eg{display:grid;gap:20px;justify-items:start;padding-bottom:56px;border-bottom:1px solid #dfe3df}
+.eg p{font-size:.92rem;max-width:26em}.eg div{display:flex;gap:8px;flex-wrap:wrap}
+.ft{display:grid;gap:36px;padding-top:48px}
+.ft>div:first-child p{font-size:.84rem;max-width:20em;margin-top:12px}
+.fc{display:grid;grid-template-columns:1fr 1fr;gap:30px 20px;font-size:.84rem}
+.fc h4{font-weight:500;margin-bottom:12px}.fc ul{list-style:none;display:grid;gap:10px;color:var(--grey)}.fc a:hover{color:var(--ink)}
+.cp{margin-top:44px;font-size:.78rem;color:var(--grey);display:flex;flex-wrap:wrap;gap:8px 18px;justify-content:space-between}
+.cp a{color:var(--deep);font-weight:500;text-decoration:underline;text-underline-offset:3px}
 
 .rv{opacity:0;transform:translateY(22px);transition:opacity .9s var(--ease),transform .9s var(--ease);transition-delay:var(--d,0s)}
 .rv.in{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){.rv{transform:none}}
 
-@media (min-width:720px){
-  :root{--pad:32px}
-  section{padding:104px 0}
-  .grid{grid-template-columns:repeat(2,1fr)}
-  .conv,.c-photo{grid-column:span 2}
-  .conv{grid-template-columns:1fr 1fr;align-items:center;padding:40px;gap:40px}
-  .plans{grid-template-columns:repeat(3,1fr)}
-  .steps{grid-template-columns:repeat(3,1fr)}
-  .rev{flex-basis:380px}.rail-nav{display:flex}
-  .foot-cols{grid-template-columns:repeat(4,1fr)}
-  .final-card>div{padding:56px}
-  .legal{grid-template-columns:1fr auto;align-items:center}
-  .how{margin:0 16px}
+@media (min-width:760px){
+  :root{--pad:40px}
+  section{padding:100px 0}
+  .links{display:flex}.burger{display:none}.nr .btn-o{display:inline-flex}
+  .hero{padding-top:150px}
+  .hg{grid-template-columns:1fr 1fr;align-items:center}.iso{height:460px}
+  .sh{grid-template-columns:1fr auto;align-items:end}.sh.c{grid-template-columns:1fr;text-align:center;justify-items:center}
+  .tri{grid-template-columns:repeat(3,1fr)}
+  .pn .box{min-height:400px;padding:40px}
+  .pc{width:310px}.pc img{height:380px}
+  .cap{grid-template-columns:1fr 1fr}
+  .tier{flex:1;max-width:none}.rail{overflow:visible}
+  .plans{grid-template-columns:repeat(3,1fr);align-items:start}.pl.hot{margin-top:-14px;padding-top:40px;padding-bottom:40px}
+  .th{grid-template-columns:1fr 1fr}
+  .ts{grid-template-columns:300px 1fr;gap:60px}
+  .nums{grid-template-columns:repeat(3,1fr)}
+  .bl{grid-template-columns:repeat(3,1fr)}
+  .fqg{grid-template-columns:.8fr 1.200fr;gap:60px;align-items:start}.fqi{aspect-ratio:4/4.600}
+  .fc{grid-template-columns:repeat(4,1fr)}
+  .ft{grid-template-columns:1fr 2fr;gap:60px}
 }
-@media (min-width:980px){
-  body{font-size:18px}
-  .nav-links{display:flex}.burger{display:none}
-  .hero{padding:150px 0 60px}
-  .hero-grid{grid-template-columns:1.100fr .9fr;align-items:center;gap:70px}
-  .f-pay{left:-50px;top:50px}.f-bal{left:-70px;right:60px}
-  .sec-head{grid-template-columns:1.100fr .9fr;align-items:end;gap:60px;margin-bottom:56px}
-  .grid{grid-template-columns:repeat(6,1fr);gap:18px}
-  .conv{grid-column:span 6}.c-sky{grid-column:span 2}.c-photo{grid-column:span 4;min-height:480px}
-  .c-tang{grid-column:span 3}.c-plain{grid-column:span 3}
-  .faq-grid{grid-template-columns:.8fr 1.200fr;gap:70px}
-  .final-card{min-height:600px}
-  .foot{grid-template-columns:1fr 1.600fr;gap:70px}
-  .pricing .sec-head{grid-template-columns:1fr auto}
+@media (min-width:1000px){
+  .stk{grid-template-columns:260px 1fr;gap:60px;align-items:start}
+  .side{display:grid;gap:14px;position:sticky;top:130px;list-style:none;font-size:1.25rem;font-weight:500;letter-spacing:-.02em}
+  .side a{display:flex;align-items:center;gap:0;transition:gap .4s var(--ease),color .3s;color:var(--ink)}
+  .side a::before{content:"";width:0;height:7px;border-radius:50%;background:var(--ink);transition:width .4s var(--ease)}
+  .side a.on{gap:10px}.side a.on::before{width:7px}
+  .pn .lab{display:none}
+  .panels{max-width:760px}
+  .tb{grid-template-columns:.42fr 1fr;gap:60px;align-items:center}
+  .tp{aspect-ratio:16/10.500}.tp .w{left:8%;max-width:210px}
+  .pn.wide{max-width:none}
 }
 </style>
 </head>
 <body>
-<header class="nav" id="nav"><div class="wrap">
-  <a class="logo" href="#top" aria-label="Plover home"><svg viewBox="0 0 32 32" aria-hidden="true"><circle class="base" cx="16" cy="16" r="16" fill="#2338F5"/><path d="M16 16L29 9.500A14 14 0 0129 22.500z" fill="#FF7A3D"/><circle class="eye" cx="13" cy="11" r="2.400" fill="#fff"/></svg>plover</a>
-  <nav class="nav-links" aria-label="Main"><a href="#features">Features</a><a href="#how">How it works</a><a href="#reviews">Reviews</a><a href="#pricing">Pricing</a><a href="#faq">Questions</a></nav>
-  <div class="nav-right"><a class="btn btn-ink btn-sm" href="#pricing">Open an account</a><button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><div><span></span><span></span></div></button></div>
+<header class="nav" id="nav"><div class="bar">
+  <a class="logo" href="#top" aria-label="Plover home"><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="12" cy="16" r="10" fill="currentColor"/><path d="M18 16l12-7v14z" fill="currentColor"/><circle cx="10" cy="13" r="2.200" fill="#DDD6FF"/></svg>plover</a>
+  <nav class="links" aria-label="Main"><a href="#products">Products</a><a href="#solution">Solution</a><a href="#notes">Resources</a><a href="#pricing">Pricing</a><a href="#faq">Questions</a></nav>
+  <div class="nr"><a class="btn btn-o btn-s" href="#top">Sign in</a><a class="btn btn-d btn-s" href="#pricing">Create account</a><button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><div><span></span><span></span></div></button></div>
 </div></header>
-<div class="sheet" id="sheet"><a href="#features">Features</a><a href="#how">How it works</a><a href="#reviews">Reviews</a><a href="#pricing">Pricing</a><a href="#faq">Questions</a><a class="btn btn-white" href="#pricing">Open an account</a></div>
+<div class="sheet" id="sheet"><a href="#products">Products</a><a href="#solution">Solution</a><a href="#notes">Resources</a><a href="#pricing">Pricing</a><a href="#faq">Questions</a><a class="btn btn-d" href="#pricing">Create account</a></div>
 
 <main id="top">
-<section class="hero"><div class="wrap hero-grid">
-  <div class="hero-copy">
-    <span class="chip fade"><i>New</i>Invoices now settle in two days</span>
-    <h1><span class="l"><span>Get paid</span></span><span class="l"><span>from anywhere.</span></span><span class="l"><span class="blue">Keep more</span></span><span class="l"><span class="blue">of it.</span></span></h1>
-    <p class="lead fade d1">Plover gives freelancers and small studios local account details in 9 currencies, invoices clients love to pay and conversion at the real rate.</p>
-    <div class="cta-row fade d2"><a class="btn btn-cobalt" href="#pricing">Open a free account</a><a class="btn btn-ghost" href="#convert">Try the calculator</a></div>
-    <p class="micro fade d3">Free to open. No monthly minimum. Set up in about 6 minutes.</p>
+<section class="hero">
+  <div class="wrap hg">
+    <div class="hc">
+      <h1 class="up">Global Pay for Independent Work</h1>
+      <p class="up u1">Get paid like a local in 9 currencies, send invoices clients love to pay and convert at the real rate, always.</p>
+      <a class="btn btn-d up u2" href="#pricing">Get started</a>
+      <div class="trust up u3"><div><img src="/fintech/img/t1.jpg" alt="" width="38" height="38"><img src="/fintech/img/t2.jpg" alt="" width="38" height="38"><img src="/fintech/img/t3.jpg" alt="" width="38" height="38"></div><span>Trusted by<br>40,000 freelancers</span></div>
+    </div>
+    <div class="iso up u2" aria-hidden="true">
+      <div class="i-card"><span>plover</span><b>LENA MARISTO &nbsp; 3712 5689 0123 4417</b><i></i></div>
+      <div class="i-a">Wallet<b>$7,200.00</b><span>+ 12% this month</span></div>
+      <div class="i-b">Your balance<b>€12,668.10</b><span>Withdraw</span></div>
+      <div class="i-p">Ask Pip, your money assistant<i><svg width="14" height="14" viewBox="0 0 14 14" fill="#fff"><path d="M7 0l1.800 5.200L14 7l-5.200 1.800L7 14l-1.800-5.200L0 7l5.200-1.800z"/></svg></i></div>
+    </div>
   </div>
-  <div class="hero-visual fade d1">
-    <div class="hero-photo"><img src="/fintech/img/hero.jpg" alt="A freelancer laughing in front of a blue wall" width="1000" height="1200"></div>
-    <div class="float f-pay"><span class="ic"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 4v12M5 11l5 5 5-5" stroke="#0E8A4B" stroke-width="2.200" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><b>+ €2,400.00</b><small>Halvar Studio paid invoice 0042</small></div></div>
-    <div class="float f-bal"><div class="row"><span>Total balance</span><span>Updated just now</span></div><div class="amt" id="amt">$18,240.55</div><div class="curs"><span class="on">USD</span><span>EUR</span><span>GBP</span><span>CAD</span><span>AUD</span><span>+4</span></div></div>
-  </div>
-</div></section>
-
-<section class="partners" aria-label="Customers"><p>Independent teams at these companies run their money on Plover</p>
-  <div class="marquee"><div class="track" id="track"><ul>
-    <li class="pl pl-odd"><svg viewBox="0 0 30 30" fill="currentColor" aria-hidden="true"><circle cx="10" cy="15" r="10"/><circle cx="23" cy="15" r="7" opacity=".45"/></svg>oddfield</li>
-    <li class="pl pl-marrow"><svg viewBox="0 0 30 30" fill="none" stroke="currentColor" stroke-width="2.400" stroke-linecap="round" aria-hidden="true"><path d="M3 26V8l12 12L27 8v18"/><path d="M9 4h12" opacity=".5"/></svg>Marrowline</li>
-    <li class="pl pl-halvar"><svg viewBox="0 0 30 30" fill="currentColor" aria-hidden="true"><path d="M2 2h7v10h12V2h7v26h-7V18H9v10H2z"/></svg>Halvar</li>
-    <li class="pl pl-kite"><svg viewBox="0 0 30 30" fill="currentColor" aria-hidden="true"><path d="M15 1l11 11-11 17L4 12z"/><path d="M15 1v28" stroke="#F4F2EC" stroke-width="1.600"/><path d="M4 12h22" stroke="#F4F2EC" stroke-width="1.600"/></svg>Kitewing</li>
-    <li class="pl pl-sable"><svg viewBox="0 0 30 30" fill="none" stroke="currentColor" stroke-width="2.400" stroke-linecap="round" aria-hidden="true"><path d="M22 7c-2-3-12-3.500-12 3 0 6 12 4 12 10.500 0 6-11 6-14 2"/></svg>Sable &amp; Ash</li>
-    <li class="pl pl-bright"><svg viewBox="0 0 30 30" fill="currentColor" aria-hidden="true"><rect x="2" y="2" width="11" height="11" rx="5.500"/><rect x="17" y="2" width="11" height="11" rx="2" opacity=".45"/><rect x="2" y="17" width="11" height="11" rx="2" opacity=".45"/><rect x="17" y="17" width="11" height="11" rx="5.500"/></svg>Brightloom</li>
+  <div class="mq"><div class="tr"><ul>
+    <li class="lg"><svg viewBox="0 0 30 30" fill="currentColor"><circle cx="10" cy="15" r="10"/><circle cx="23" cy="15" r="7" opacity=".5"/></svg>oddfield</li>
+    <li class="lg s4"><svg viewBox="0 0 30 30" fill="none" stroke="currentColor" stroke-width="2.400" stroke-linecap="round"><path d="M3 26V8l12 12L27 8v18"/></svg>Marrowline</li>
+    <li class="lg s3"><svg viewBox="0 0 30 30" fill="currentColor"><path d="M2 2h7v10h12V2h7v26h-7V18H9v10H2z"/></svg>Halvar</li>
+    <li class="lg"><svg viewBox="0 0 30 30" fill="currentColor"><path d="M15 1l11 11-11 17L4 12z"/></svg>Kitewing</li>
+    <li class="lg s2"><svg viewBox="0 0 30 30" fill="none" stroke="currentColor" stroke-width="2.400" stroke-linecap="round"><path d="M22 7c-2-3-12-3.500-12 3 0 6 12 4 12 10.500 0 6-11 6-14 2"/></svg>Sable &amp; Ash</li>
+    <li class="lg s1"><svg viewBox="0 0 30 30" fill="currentColor"><rect x="2" y="2" width="11" height="11" rx="5.500"/><rect x="17" y="2" width="11" height="11" rx="2" opacity=".5"/><rect x="2" y="17" width="11" height="11" rx="2" opacity=".5"/><rect x="17" y="17" width="11" height="11" rx="5.500"/></svg>Brightloom</li>
   </ul></div></div>
 </section>
 
-<section id="features"><div class="wrap">
-  <div class="sec-head rv"><h2>One account for every client, wherever they are.</h2><p class="lead">Stop losing a slice of every invoice to slow transfers and hidden rates. Plover shows you the exact number before the money moves.</p></div>
-  <div class="grid">
-    <article class="card conv rv" id="convert">
-      <div><h3 style="font-size:1.9rem">Know what lands before you send the invoice</h3><p>Type an amount and pick where you want it. One flat fee of 0.6%, the real exchange rate and nothing tucked into the spread.</p></div>
-      <div class="conv-ui">
-        <div class="field"><label for="amt-in">Your client pays</label><input id="amt-in" inputmode="decimal" value="2,500" autocomplete="off"><select id="cur-in" aria-label="Client currency"><option>USD</option><option>EUR</option><option>GBP</option></select></div>
-        <div class="field"><label for="cur-out">You receive</label><output id="amt-out">0</output><select id="cur-out" aria-label="Your currency"><option>EUR</option><option>GBP</option><option>USD</option><option>CAD</option><option>AUD</option></select></div>
-        <div class="lines"><div>Plover fee (0.6%)<b id="l-fee"></b></div><div>Exchange rate<b id="l-rate"></b></div><div class="save">You keep more than with a typical bank<b id="l-save"></b></div></div>
-        <p class="note">Example rates for this demo, not live market data.</p>
-      </div>
-    </article>
-    <article class="card c-sky rv">
-      <h3>Local details in 9 currencies</h3><p>Clients pay you like a local supplier, with no international wire on their side.</p>
-      <div class="bal-list">
-        <div class="bal"><i class="fl" style="background:#2338F5">$</i><div>US dollar<small>Routing and account number</small></div><span>12,480.20</span></div>
-        <div class="bal"><i class="fl" style="background:#0B0D1F">€</i><div>Euro<small>IBAN</small></div><span>3,910.00</span></div>
-        <div class="bal"><i class="fl" style="background:#FF7A3D">£</i><div>British pound<small>Sort code</small></div><span>1,204.75</span></div>
-      </div>
-    </article>
-    <article class="card c-photo rv" style="--d:.08s">
-      <img src="/fintech/img/shop.jpg" alt="A shop owner taking a payment at the counter" loading="lazy" width="1200" height="900">
-      <div class="inv">Invoice 0042<b>€2,400.00</b><i>Paid in 2 days</i></div>
-      <div><h3 style="font-size:1.8rem">Invoices clients pay faster</h3><p>Send a link, they pay by card or bank transfer in their own currency. Gentle reminders go out for you, so you never have to chase.</p></div>
-    </article>
-    <article class="card c-tang rv">
-      <h3>A card that spends from any balance</h3><p>Pay for tools and travel straight from the currency you hold. Freeze it in one tap.</p>
-      <div class="vcard"><div class="top"><span>plover</span><span class="chipset"></span></div><div class="num">•••• •••• •••• 4417</div><div class="bot"><span>Studio card</span><span>09 / 29</span></div></div>
-    </article>
-    <article class="card c-plain rv" style="--d:.08s">
-      <h3>Tax time, already sorted</h3><p>Every payment is tagged by client and currency. Export a clean statement for your accountant in two taps.</p>
-      <div class="bal-list">
-        <div class="bal" style="background:var(--bone)"><div>Set aside for tax<small>Automatic, 22% of each payment</small></div><span>$4,012.92</span></div>
-        <div class="bal" style="background:var(--bone)"><div>Paid this quarter<small>14 invoices, 6 clients</small></div><span>$18,240.55</span></div>
-      </div>
-    </article>
+<section><div class="wrap">
+  <div class="sh rv"><h2>The Future of<br>Getting Paid</h2><p>Plover removes the friction of cross border payments, so the money you earn arrives faster and more of it stays yours.</p></div>
+  <div class="tri">
+    <article class="tc ph rv"><img src="/fintech/img/intro.jpg" alt="A freelancer smiling outdoors in a scarf and beanie" loading="lazy" width="800" height="1000"><div class="balc"><small>Your balance<i></i></small><b>$21,530.86</b><div><span>Send</span><span>Withdraw</span></div></div></article>
+    <article class="tc dk rv" style="--d:.08s"><span class="ic"><svg width="16" height="16" viewBox="0 0 14 14" fill="#0D261E"><path d="M7 0l1.800 5.200L14 7l-5.200 1.800L7 14l-1.800-5.200L0 7l5.200-1.800z"/></svg></span><h3 style="max-width:10em">Smarter invoicing, powered by Pip</h3><p>Pip drafts your invoices, picks the best currency for each client and nudges late payers for you.</p><div class="pillb">Meet Pip<i><svg width="16" height="16" viewBox="0 0 14 14" fill="#CDEED3"><path d="M7 0l1.800 5.200L14 7l-5.200 1.800L7 14l-1.800-5.200L0 7l5.200-1.800z"/></svg></i></div></article>
+    <article class="tc lt rv" style="--d:.16s"><h3>Income you can predict</h3><p>See what is due, what is late and what lands this week before it happens.</p><div class="chartc"><small>Paid on time<em>Monthly</em></small><b>85%<span>+ 10%</span></b><div class="bars"><i style="--h:74%;--i:0"></i><i style="--h:62%;--i:1"></i><i style="--h:56%;--i:2"></i><i style="--h:58%;--i:3"></i><i class="on" style="--h:50%;--i:4"></i></div></div></article>
   </div>
 </div></section>
 
-<section class="how" id="how"><div class="wrap">
-  <div class="sec-head rv"><h2>From sign up to first payment in an afternoon.</h2><p class="lead">No branch visits and no paperwork in the post.</p></div>
-  <ol class="steps">
-    <li class="step rv"><span class="n">1</span><h3>Open your account</h3><p>Answer a few questions and verify your ID from your phone. Most accounts are approved in under 6 minutes.</p></li>
-    <li class="step rv" style="--d:.08s"><span class="n">2</span><h3>Share your details or an invoice</h3><p>Copy local account details for any of 9 currencies, or send a branded invoice with a pay link.</p></li>
-    <li class="step rv" style="--d:.16s"><span class="n">3</span><h3>Get paid and move it your way</h3><p>Hold it, convert it at the real rate, spend it on your card or send it to your bank the same day.</p></li>
-  </ol>
-</div></section>
+<section id="products" style="padding-top:0"><div class="wrap stk">
+  <ul class="side" id="side"><li><a href="#p1" class="on">Local Accounts</a></li><li><a href="#p2">Real Rate Exchange</a></li><li><a href="#p3">Smart Invoices</a></li><li><a href="#p4">Automatic Tax Pot</a></li></ul>
+  <div>
+    <div class="rv" style="margin-bottom:40px"><h2>Money Tools That Scale<br>With Your Work</h2><p style="font-size:.84rem;max-width:34em;margin-top:14px">One account that does more than hold your money. It gets you paid sooner, converts fairly and keeps tax day calm.</p></div>
+    <div class="panels">
+      <article class="pn rv" id="p1"><div class="box"><div class="ui">
+        <div class="bank"><div class="t"><span class="logo"><svg viewBox="0 0 32 32"><circle cx="12" cy="16" r="10" fill="#fff"/><path d="M18 16l12-7v14z" fill="#fff"/><circle cx="10" cy="13" r="2.200" fill="#0D261E"/></svg>plover</span><svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="#CDEED3" stroke-width="1.600" stroke-linecap="round"><path d="M7 7c2 2.500 2 5.500 0 8M11 5c3 3.700 3 8.300 0 12M15 3c4 5 4 11 0 16"/></svg></div><div><div style="display:flex;justify-content:space-between;margin-bottom:6px"><span>LENA MARISTO</span><span>11/29</span></div><div class="num">3712 5689 0123 4417</div></div></div>
+        <div class="w" style="max-width:250px">Paid this month<b class="big">$9,252<span>+ 7%</span></b><svg viewBox="0 0 220 70" style="width:100%;margin-top:6px"><path d="M2 58c18-4 26-20 44-18s22 14 40 10 24-30 44-26 22 20 40 12 26-26 48-30" fill="none" stroke="#0D261E" stroke-width="1.600"/><path d="M2 58c18-4 26-20 44-18s22 14 40 10 24-30 44-26 22 20 40 12 26-26 48-30V70H2z" fill="#CDEED3" opacity=".35"/></svg><div class="mons"><i>Jan</i><i>Feb</i><i>Mar</i><i>Apr</i><i>May</i><i class="on">Jun</i><i>Jul</i></div></div>
+      </div></div><span class="lab">Local Accounts</span><h3>Account details in 9 currencies</h3><p>Give each client local details in their own currency. They pay like they would pay a supplier down the road, and you skip the wire fees.</p><a class="btn btn-d" href="#pricing">Create account</a></article>
 
-<section id="reviews"><div class="wrap">
-  <div class="rev-head rv"><h2>Kinder to your margins.</h2><div class="rail-nav"><button id="prev" aria-label="Previous reviews"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="#0B0D1F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 3.500L5.500 9l5.500 5.500"/></svg></button><button id="next" aria-label="Next reviews"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="#0B0D1F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3.500L12.500 9 7 14.500"/></svg></button></div></div>
-  <div class="rail rv" id="rail">
-    <figure class="rev"><span class="big">$3,100</span><blockquote>That is what I saved in fees last year compared with my old bank. Same clients, same invoices, more money.</blockquote><figcaption class="who"><img src="/fintech/img/p1.jpg" alt="" loading="lazy" width="46" height="46"><div><b>Idris Calloway</b><span>Motion designer</span></div></figcaption></figure>
-    <figure class="rev ink"><span class="big">2 days</span><blockquote>My average time to get paid dropped from eleven days to two. The pay link does the nagging so I do not have to.</blockquote><figcaption class="who"><img src="/fintech/img/p2.jpg" alt="" loading="lazy" width="46" height="46"><div><b>Lena Maristo</b><span>Brand strategist</span></div></figcaption></figure>
-    <figure class="rev sky"><span class="big">9 currencies</span><blockquote>We bill clients on three continents. Giving each one local details made us look ten times bigger than we are.</blockquote><figcaption class="who"><img src="/fintech/img/p3.jpg" alt="" loading="lazy" width="46" height="46"><div><b>Mateo Brandt</b><span>Founder, two person studio</span></div></figcaption></figure>
-    <figure class="rev"><span class="big">Zero</span><blockquote>Surprises on my statement since I switched. The calculator number is the number that arrives, every time.</blockquote><figcaption class="who"><img src="/fintech/img/p4.jpg" alt="" loading="lazy" width="46" height="46"><div><b>Odile Ferran</b><span>Consultant</span></div></figcaption></figure>
-    <figure class="rev ink"><span class="big">6 minutes</span><blockquote>I opened the account on a train and sent my first invoice before my stop. I kept waiting for the catch.</blockquote><figcaption class="who"><img src="/fintech/img/p5.jpg" alt="" loading="lazy" width="46" height="46"><div><b>Samir Kessane</b><span>Product developer</span></div></figcaption></figure>
+      <article class="pn rv" id="p2"><div class="box"><div class="ui">
+        <div class="w cv">Convert<b class="big" id="rt">1 USD = 0.9200 EUR</b>
+          <div class="f"><label for="ai">Client pays</label><input id="ai" inputmode="decimal" value="2,500" autocomplete="off"><select id="ci" aria-label="From"><option>USD</option><option>EUR</option><option>GBP</option></select></div>
+          <div class="f"><label>You receive</label><output id="ao"></output><select id="co" aria-label="To"><option>EUR</option><option>GBP</option><option>USD</option><option>CAD</option></select></div>
+          <div class="ln">Plover fee, 0.6%<b id="lf"></b></div><div class="ln g">Saved against a typical bank<b id="ls"></b></div></div>
+        <div class="w" style="max-width:230px"><b style="font-size:.92rem">Transfers</b><div style="height:8px"></div><div class="li"><i>HS</i><div><b>Halvar Studio</b><br>Invoice 0042</div><em>+ €2,400</em></div><div class="li"><i>KW</i><div><b>Kitewing</b><br>Retainer, June</div><em>+ $1,800</em></div><div class="li"><i>OF</i><div><b>Oddfield</b><br>Invoice 0041</div><em class="w8">Due Friday</em></div></div>
+      </div></div><span class="lab">Real Rate Exchange</span><h3>Convert at the real rate, with one flat fee</h3><p>Type an amount and see exactly what lands before you send the invoice. No spread hidden in the rate and nothing added at the other end. Rates shown are examples for this demo.</p><a class="btn btn-d" href="#pricing">Create account</a></article>
+
+      <article class="pn rv" id="p3"><div class="box"><div class="ui">
+        <div class="w" style="max-width:250px;text-align:center"><b style="font-size:1rem">Invoice health</b><br>Last 90 days<div class="ring"><div><span><b>94%</b>paid on time</span></div></div><div style="margin-top:12px;background:var(--mint);color:var(--dg);border-radius:99px;padding:6px 0;font-weight:500">Reminders are on</div></div>
+        <div class="w" style="max-width:230px"><b style="font-size:.92rem">Open invoices</b><div style="height:8px"></div><div class="li"><i>SA</i><div><b>Sable &amp; Ash</b><br>$3,150.00</div><em>Viewed</em></div><div class="li"><i>BL</i><div><b>Brightloom</b><br>£980.00</div><em class="w8">Reminder sent</em></div><div class="li"><i>ML</i><div><b>Marrowline</b><br>€4,200.00</div><em>Paid</em></div></div>
+      </div></div><span class="lab">Smart Invoices</span><h3>Invoices that chase themselves</h3><p>Send a pay link in seconds. Clients pay by card or bank transfer in their own currency, and polite reminders go out without you lifting a finger.</p><a class="btn btn-d" href="#pricing">Create account</a></article>
+
+      <article class="pn rv" id="p4"><div class="box"><div class="ui">
+        <div class="w" style="max-width:230px"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px"><span style="background:var(--pan);border-radius:99px;padding:4px 10px;color:var(--ink);font-weight:500">Tax pot</span><span style="width:22px;height:14px;border-radius:99px;background:#FF8A5B;box-shadow:-9px 0 0 rgba(255,200,90,.9)"></span></div>Set aside so far<b class="big">$4,012.92</b><div style="display:flex;justify-content:space-between;margin-top:14px"><span>Rate<br><b>22% of each payment</b></span><span>Next bill<br><b>31 Jan</b></span></div></div>
+        <div class="w" style="max-width:270px"><div class="tabsm"><i>24H</i><i class="on">1W</i><i>1M</i><i>1Y</i><i>All</i></div><svg viewBox="0 0 240 110" style="width:100%"><g stroke="#e9ece9" stroke-width="1"><path d="M0 20h240M0 50h240M0 80h240M40 0v110M80 0v110M120 0v110M160 0v110M200 0v110"/></g><path d="M0 96c14-2 20-10 32-8s14 10 26 4 14-22 28-24 16 8 28 2 12-24 26-30 18 6 30-4 18-22 30-26 20 2 40-10V110H0z" fill="#CDEED3" opacity=".5"/><path d="M0 96c14-2 20-10 32-8s14 10 26 4 14-22 28-24 16 8 28 2 12-24 26-30 18 6 30-4 18-22 30-26 20 2 40-10" fill="none" stroke="#0D261E" stroke-width="1.600"/></svg><div class="mons"><i>Mon</i><i>Tue</i><i>Wed</i><i>Thu</i><i>Fri</i><i>Sat</i><i>Sun</i></div></div>
+      </div></div><span class="lab">Automatic Tax Pot</span><h3>Tax set aside before you can spend it</h3><p>Pick a percentage once. Plover moves it into a separate pot every time you get paid and hands your accountant a clean export.</p><a class="btn btn-d" href="#pricing">Create account</a></article>
+    </div>
   </div>
 </div></section>
 
-<section class="pricing" id="pricing" style="padding-top:0"><div class="wrap">
-  <div class="sec-head rv"><div style="display:grid;gap:16px"><h2>Simple plans. Honest fees.</h2><p class="lead">Start free and upgrade when your client list grows.</p></div>
-    <div class="toggle" id="toggle" role="group" aria-label="Billing period"><span class="knob"></span><button data-p="m" aria-pressed="true">Monthly</button><button data-p="y" aria-pressed="false">Yearly, save 20%</button></div></div>
+<section class="car" style="padding-top:0">
+  <div class="wrap rv" style="margin-bottom:32px"><h2>Where Your Work Meets<br>Every Currency</h2><p style="font-size:.84rem;max-width:30em;margin-top:14px">Designers, developers, writers and studios use Plover to bill the whole world from one place.</p></div>
+  <div class="mq rv"><div class="tr"><ul>
+    <li class="pc"><img src="/fintech/img/c1.jpg" alt="A designer in a denim jacket laughing" loading="lazy" width="640" height="860"><span style="background:var(--navy)">Paid like a local.</span></li>
+    <li class="pc"><img src="/fintech/img/c2.jpg" alt="A developer in front of a colourful mural" loading="lazy" width="640" height="860"><span style="background:var(--olive)">Invoices that chase themselves.</span></li>
+    <li class="pc"><img src="/fintech/img/c3.jpg" alt="A writer smiling in an open field" loading="lazy" width="640" height="860"><span style="background:var(--deep)">Your gateway to global clients.</span></li>
+    <li class="pc"><img src="/fintech/img/c4.jpg" alt="A strategist laughing in a red top" loading="lazy" width="640" height="860"><span style="background:var(--dg)">Move freely, spend anywhere.</span></li>
+    <li class="pc"><img src="/fintech/img/c5.jpg" alt="An illustrator laughing against a blue wall" loading="lazy" width="640" height="860"><span style="background:var(--navy)">Real rates, every day.</span></li>
+  </ul></div></div>
+</section>
+
+<section id="solution" style="padding-top:40px"><div class="wrap">
+  <div class="sh c rv"><h2>Core Plover Capabilities</h2></div>
+  <div class="cap">
+    <article class="cc a rv"><h3>Pip, your live money assistant</h3><p>Plain answers about your own account, any time.</p><img src="/fintech/img/cap.jpg" alt="A consultant smiling in a grey blazer" loading="lazy" width="700" height="800"><div class="bub"><div><b>Lena</b>Which client should I bill in euros?</div><div><b>Pip</b>Halvar Studio. Billing them in euros saves you about $38 on each invoice.</div></div></article>
+    <article class="cc rv" style="--d:.08s"><h3>Fees, shown upfront</h3><p>One flat fee on conversion and nothing else. See the total before any money moves.</p><div class="chips"><span>Live rate check</span><span>0.6% flat fee</span><span>No hidden spread</span></div><div class="don"><div style="font-size:.7rem;color:var(--grey)">Earned this quarter<b style="display:block;font-size:1.5rem;color:var(--ink);font-weight:500;letter-spacing:-.03em">$25,390<small style="font-size:.8rem">.32</small></b><span style="background:var(--mint);color:var(--dg);border-radius:99px;padding:2px 8px;font-weight:500">+ 2.9%</span></div><svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="50" stroke="#e6ebe6"/><circle cx="60" cy="60" r="50" stroke="#CDEED3" stroke-dasharray="314" stroke-dashoffset="314" data-o="60"/><circle cx="60" cy="60" r="36" stroke="#eeeaff"/><circle cx="60" cy="60" r="36" stroke="#DDD6FF" stroke-dasharray="226" stroke-dashoffset="226" data-o="80"/><circle cx="60" cy="60" r="22" stroke="#f2f6e0"/><circle cx="60" cy="60" r="22" stroke="#455200" stroke-dasharray="138" stroke-dashoffset="138" data-o="70"/></svg></div></article>
+    <article class="cc rv"><h3>Real time syncing</h3><p>Connects with over 10,000 banks worldwide.</p><div class="net"><svg viewBox="0 0 400 280" preserveAspectRatio="xMidYMid meet"><path d="M200 140H70M200 140h130M200 140h-50v-80H100M200 140h-50v80H100M200 140h50V60h50M200 140h50v80h50"/><g fill="#fff"><circle cx="70" cy="140" r="18"/><circle cx="330" cy="140" r="18"/><circle cx="100" cy="60" r="18"/><circle cx="100" cy="220" r="18"/><circle cx="300" cy="60" r="18"/><circle cx="300" cy="220" r="18"/></g><g fill="#0D261E"><rect x="63" y="133" width="14" height="14" rx="7"/><path d="M323 133h14l-7 14z"/><rect x="93" y="53" width="14" height="14" rx="3"/><path d="M100 212l8 8-8 8-8-8z"/><path d="M293 55h14v4h-14zM293 62h14v4h-14z"/><circle cx="296" cy="220" r="4"/><circle cx="305" cy="220" r="4"/></g><circle cx="200" cy="140" r="34" fill="#22105E"/><g transform="translate(184 124)"><circle cx="12" cy="16" r="10" fill="#fff"/><path d="M18 16l12-7v14z" fill="#fff"/><circle cx="10" cy="13" r="2.200" fill="#22105E"/></g></svg></div></article>
+    <article class="cc rv" style="--d:.08s"><h3>Banking in your pocket</h3><p>Create a new card in seconds and freeze it with one tap the moment a subscription is no longer needed.</p><div class="stack"><i></i><i></i><i>plover<b>Lena<br>Maristo</b></i></div></article>
+  </div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+  <div class="rv" style="margin-bottom:32px"><h2>The Plover Card Family</h2></div>
+  <div class="rail rv">
+    <div class="tier"><div class="tv" style="background:var(--dg)"><b>LENA MARISTO</b><span>3712 5689 0123 4417</span></div><h3>Slate</h3><p>The everyday card. Spend from any balance with no foreign fees.</p></div>
+    <div class="tier"><div class="tv" style="background:var(--olive)"><b>IDRIS CALLOWAY</b><span>3712 5689 0123 2290</span></div><h3>Moss</h3><p>Built for studios. Team cards with limits you set per person.</p></div>
+    <div class="tier"><div class="tv" style="background:var(--navy)"><b>MATEO BRANDT</b><span>3712 5689 0123 7754</span></div><h3>Tide</h3><p>Virtual only. Single use numbers for safer online spending.</p></div>
+    <div class="tier"><div class="tv" style="background:var(--deep)"><b>ODILE FERRAN</b><span>3712 5689 0123 9031</span></div><h3>Iris</h3><p>The starter card. Free with every account and ready in seconds.</p></div>
+  </div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+  <div class="rv" style="margin-bottom:32px"><h2>Run Your Business<br>With Financial Freedom</h2></div>
+  <div class="tb rv">
+    <div class="tt"><div class="tl" role="tablist" id="tl"><button role="tab" aria-selected="true">Pay Links</button><button role="tab" aria-selected="false">Team Wallets</button><button role="tab" aria-selected="false">Pip Assistant</button><button role="tab" aria-selected="false">Spend Shield</button></div><div style="height:22px"></div><p id="tx">Turn any quote into a pay link. Clients choose card or bank transfer and you see the money the moment it moves.</p><a class="btn btn-d" href="#pricing">Create account</a></div>
+    <div class="tp"><img src="/fintech/img/duo.jpg" alt="Two freelancers working side by side on laptops" loading="lazy" width="1200" height="900"><div class="w" id="tw"><div style="display:flex;justify-content:space-between;margin-bottom:8px"><span style="width:22px;height:14px;border-radius:99px;background:#FF8A5B;box-shadow:9px 0 0 rgba(255,200,90,.9)"></span><b style="letter-spacing:.06em;font-size:.6rem">PLOVER</b></div><span id="twl">Your balance</span><b class="big" id="twv">$12,668.10</b><div style="display:flex;gap:6px;margin-top:10px"><span style="flex:1;text-align:center;background:var(--dg);color:#fff;border-radius:99px;padding:6px 0;font-weight:500" id="twa">Withdraw</span><span style="flex:1;text-align:center;border:1px solid var(--dg);color:var(--dg);border-radius:99px;padding:5px 0;font-weight:500" id="twb">Send link</span></div></div></div>
+  </div>
+</div></section>
+
+<section id="pricing" style="padding-top:0"><div class="wrap">
+  <div class="rv" style="margin-bottom:32px"><h2>Simple Plans For<br>Work Without Borders</h2><p style="font-size:.84rem;max-width:30em;margin-top:14px">Pick the plan that fits how you work today. Change or cancel whenever you like.</p></div>
   <div class="plans">
-    <div class="plan rv"><div><h3>Solo</h3><p class="for">For getting your first clients paid.</p></div><div class="price"><b>$0</b><span>forever</span></div><ul><li>Local details in 3 currencies</li><li>5 invoices a month</li><li>0.9% conversion fee</li><li>Virtual card</li></ul><a class="btn btn-ghost" href="#top">Open a free account</a></div>
-    <div class="plan hot rv" style="--d:.08s"><span class="badge">Most popular</span><div><h3>Pro</h3><p class="for">For full time freelancers.</p></div><div class="price"><b data-m="$14" data-y="$11">$14</b><span>per month</span></div><ul><li>Local details in all 9 currencies</li><li>Unlimited invoices and reminders</li><li>0.6% conversion fee</li><li>Automatic tax pot</li><li>Same day payouts</li></ul><a class="btn btn-cobalt" href="#top">Start with Pro</a></div>
-    <div class="plan rv" style="--d:.16s"><div><h3>Studio</h3><p class="for">For small teams of up to 10.</p></div><div class="price"><b data-m="$39" data-y="$31">$39</b><span>per month</span></div><ul><li>Everything in Pro</li><li>Team cards with spending limits</li><li>0.4% conversion fee</li><li>Accounting exports and roles</li><li>Priority human support</li></ul><a class="btn btn-ink" href="#top">Start with Studio</a></div>
-  </div>
-  <p class="fine rv">Yearly prices are shown per month and billed once a year. Cancel whenever you like.</p>
-</div></section>
-
-<section id="faq" style="padding-top:0"><div class="wrap faq-grid">
-  <div class="rv" style="display:grid;gap:16px;align-content:start"><h2>Questions, answered plainly.</h2><p class="lead">Need a human? Our support team replies in under 4 minutes on average, every day of the week.</p></div>
-  <div class="rv">
-    <div class="qa open"><button aria-expanded="true">Is my money safe with Plover?<span class="pm"></span></button><div class="ans"><div><p>Customer funds are held separately from our own in safeguarded accounts at regulated partner banks. We never lend your money out.</p></div></div></div>
-    <div class="qa"><button aria-expanded="false">What does it really cost?<span class="pm"></span></button><div class="ans"><div><p>Receiving money is free. Converting it costs one flat fee, shown before you confirm. Sending to your own bank is free on every plan.</p></div></div></div>
-    <div class="qa"><button aria-expanded="false">Which currencies can I hold?<span class="pm"></span></button><div class="ans"><div><p>US dollars, euros, British pounds, Canadian and Australian dollars, Swiss francs, yen, Singapore dollars and New Zealand dollars.</p></div></div></div>
-    <div class="qa"><button aria-expanded="false">How long do payouts take?<span class="pm"></span></button><div class="ans"><div><p>Pro and Studio payouts arrive the same working day. Solo payouts arrive the next working day.</p></div></div></div>
-    <div class="qa"><button aria-expanded="false">Can I use Plover without a registered company?<span class="pm"></span></button><div class="ans"><div><p>Yes. You can open an account as an individual and add a company later without changing your account details.</p></div></div></div>
-    <div class="qa"><button aria-expanded="false">Does it work with my accounting tool?<span class="pm"></span></button><div class="ans"><div><p>Plover exports clean statements in the formats accountants ask for, and Studio adds a live feed to the most common bookkeeping apps.</p></div></div></div>
+    <article class="pl rv"><h3>Plover Solo</h3><div class="pr">Free</div><p>The essentials for getting your first clients paid.</p><a class="btn btn-d" href="#top">Open account</a><h4>Free plan features</h4><ul><li>Local details in 3 currencies</li><li>5 invoices a month</li><li>0.9% conversion fee</li><li>Email support</li></ul></article>
+    <article class="pl hot rv" style="--d:.08s"><h3>The Pro Plan</h3><div class="pr">$14<span>/Per month</span></div><p>Everything a full time freelancer needs to get paid fast.</p><a class="btn btn-l" href="#top">Open account</a><h4>Includes Solo, plus</h4><ul><li>All 9 currencies</li><li>Unlimited invoices and reminders</li><li>0.6% conversion fee</li><li>Automatic tax pot</li></ul></article>
+    <article class="pl rv" style="--d:.16s"><h3>The Studio Plan</h3><div class="pr">$39<span>/Per month</span></div><p>Shared money tools for small teams of up to 10.</p><a class="btn btn-d" href="#top">Open account</a><h4>Includes Pro, plus</h4><ul><li>Team cards with limits</li><li>Roles and approvals</li><li>0.4% conversion fee</li><li>Priority human support</li></ul></article>
   </div>
 </div></section>
 
-<section class="final"><div class="wrap"><div class="final-card rv">
-  <img src="/fintech/img/team.jpg" alt="Two colleagues celebrating at a desk" loading="lazy" width="1400" height="900">
-  <div><h2>Your next invoice could land in two days.</h2><p>Open a free account in about 6 minutes and send your first pay link today.</p><a class="btn btn-white" href="#pricing">Open a free account</a></div>
-</div></div></section>
-</main>
+<section style="padding-top:0"><div class="wrap">
+  <div class="th rv"><div class="rate">4.9/5<svg width="14" height="14" viewBox="0 0 16 16" fill="#22105E"><path d="M8 1.200l2 4.300 4.700.600-3.500 3.200.900 4.700L8 11.700 3.900 14l.900-4.700L1.300 6.100 6 5.500z"/></svg>Trustcheck<small>Based on 5,280 reviews</small></div><div><h2>Proven Rails.<br>Unrestricted Growth.</h2><p>Join more than 40,000 independent workers who use Plover to move money across borders without losing a slice of it.</p></div></div>
+  <div class="ts rv">
+    <div><div class="tph" id="tph"><img class="on" src="/fintech/img/t1.jpg" alt="Portrait of Odile Ferran" loading="lazy" width="640" height="640"><img src="/fintech/img/t2.jpg" alt="Portrait of Samir Kessane" loading="lazy" width="640" height="640"><img src="/fintech/img/t3.jpg" alt="Portrait of Joss Tenley" loading="lazy" width="640" height="640"></div><div class="who" id="who">Odile Ferran<span>Brand consultant</span></div></div>
+    <div class="tq"><blockquote id="tqq">Plover is the first money tool that actually keeps up with how I work. The number in the calculator is the number that arrives, and it saved me $3,100 in fees last year.</blockquote><div class="arr"><button id="tprev" aria-label="Previous review"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#fff" stroke-width="1.500" stroke-linecap="round" stroke-linejoin="round"><path d="M13 8H3M7 4L3 8l4 4"/></svg></button><button id="tnext" aria-label="Next review"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#fff" stroke-width="1.500" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></button></div></div>
+  </div>
+  <div class="prog rv"><i id="pg"></i></div>
+  <div class="nums rv"><div><b data-n="1.400" data-p="$" data-s="B" data-f="1">0</b><span>Total volume paid out</span></div><div><b data-n="2" data-s=" days">0</b><span>Average time to get paid</span></div><div><b data-n="3.100" data-s="%" data-f="1">0</b><span>More kept on every invoice</span></div></div>
+</div></section>
 
-<footer><div class="wrap">
-  <div class="foot">
-    <div style="display:grid;gap:16px;align-content:start"><a class="logo" href="#top"><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="16" fill="#2338F5"/><path d="M16 16L29 9.500A14 14 0 0129 22.500z" fill="#FF7A3D"/><circle cx="13" cy="11" r="2.400" fill="#fff"/></svg>plover</a><p style="max-width:26em">Money tools for people who work for themselves and bill the whole world.</p></div>
-    <div class="foot-cols">
-      <div><h4>Product</h4><ul><li><a href="#features">Accounts</a></li><li><a href="#features">Invoices</a></li><li><a href="#features">Cards</a></li><li><a href="#convert">Calculator</a></li></ul></div>
-      <div><h4>Company</h4><ul><li><a href="#how">How it works</a></li><li><a href="#reviews">Reviews</a></li><li><a href="#pricing">Pricing</a></li><li><a href="#faq">Questions</a></li></ul></div>
+<section id="notes" style="padding-top:0"><div class="wrap">
+  <div class="bh rv"><h2>Read Our Latest Notes</h2><a class="btn btn-d" href="#top">View all articles</a></div>
+  <div class="bl">
+    <a class="bc rv" href="#top"><img src="/fintech/img/shop.jpg" alt="A shop owner taking a payment at the counter" loading="lazy" width="1200" height="900"><div><small><span>Category: Guides</span><span>Nov 12, 2026</span></small><b>Pricing in a second currency</b></div></a>
+    <a class="bc rv" style="--d:.08s" href="#top"><img src="/fintech/img/team.jpg" alt="Two colleagues celebrating at a desk" loading="lazy" width="1400" height="900"><div><small><span>Category: Product</span><span>Nov 4, 2026</span></small><b>Team wallets have landed</b></div></a>
+    <a class="bc rv" style="--d:.16s" href="#top"><img src="/fintech/img/cafe.jpg" alt="A small studio team laughing around a table" loading="lazy" width="1400" height="900"><div><small><span>Category: Stories</span><span>Oct 27, 2026</span></small><b>How a studio of three bills nine countries</b></div></a>
+  </div>
+</div></section>
+
+<section id="faq" style="padding-top:0"><div class="wrap">
+  <h2 class="rv" style="text-align:center">The Plover FAQ</h2>
+  <div class="fqg">
+    <div class="fqi rv"><img src="/fintech/img/faq.jpg" alt="A developer working at her laptop" loading="lazy" width="800" height="1000"></div>
+    <div class="rv" id="fq"></div>
+  </div>
+</div></section>
+
+<div class="end"><div class="wrap">
+  <div class="eg rv"><h2>Flexible Money Tools,<br>Tailored to Your Growth</h2><p>Open a free account in about 6 minutes and send your first pay link today.</p><div><a class="btn btn-d" href="#pricing">Create account</a><a class="btn btn-o" href="#products">Explore products</a></div></div>
+  <footer class="ft">
+    <div><a class="logo" href="#top"><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="12" cy="16" r="10" fill="currentColor"/><path d="M18 16l12-7v14z" fill="currentColor"/><circle cx="10" cy="13" r="2.200" fill="#F4F6F4"/></svg>plover</a><p>Money tools for people who work for themselves and bill the whole world.</p></div>
+    <div class="fc">
+      <div><h4>Products</h4><ul><li><a href="#p1">Local accounts</a></li><li><a href="#p2">Exchange</a></li><li><a href="#p3">Invoices</a></li><li><a href="#p4">Tax pot</a></li></ul></div>
+      <div><h4>Company</h4><ul><li><a href="#solution">Solution</a></li><li><a href="#pricing">Pricing</a></li><li><a href="#notes">Notes</a></li><li><a href="#faq">Questions</a></li></ul></div>
       <div><h4>Support</h4><ul><li>Help centre</li><li>Security</li><li>Status</li><li>help@plover.example</li></ul></div>
       <div><h4>Legal</h4><ul><li>Terms</li><li>Privacy</li><li>Fees</li></ul></div>
     </div>
-  </div>
-  <div class="legal"><span>© 2026 Plover. A fictional brand, not a real financial service. Photos from Unsplash.</span><span><a href="https://thedavelement.vercel.app" target="_blank" rel="noopener">Concept project by Dave</a></span></div>
-</div></footer>
+  </footer>
+  <div class="cp"><span>© 2026 Plover. A fictional brand, not a real financial service. Photos from Unsplash.</span><a href="https://thedavelement.vercel.app" target="_blank" rel="noopener">Concept project by Dave</a></div>
+</div></div>
+</main>
 
 <script>
 (function(){
   var $=function(s,r){return (r||document).querySelector(s)},$$=function(s,r){return [].slice.call((r||document).querySelectorAll(s))};
   var body=document.body,nav=$('#nav');
-  var onS=function(){nav.classList.toggle('solid',scrollY>12)};onS();addEventListener('scroll',onS,{passive:true});
-  var burger=$('#burger');function setMenu(o){body.classList.toggle('menu-open',o);burger.setAttribute('aria-expanded',o);body.style.overflow=o?'hidden':''}
-  burger.addEventListener('click',function(){setMenu(!body.classList.contains('menu-open'))});$$('#sheet a').forEach(function(a){a.addEventListener('click',function(){setMenu(false)})});
+  var onS=function(){nav.classList.toggle('solid',scrollY>40)};onS();addEventListener('scroll',onS,{passive:true});
+  var burger=$('#burger');function setM(o){body.classList.toggle('mo',o);burger.setAttribute('aria-expanded',o);body.style.overflow=o?'hidden':''}
+  burger.addEventListener('click',function(){setM(!body.classList.contains('mo'))});$$('#sheet a').forEach(function(a){a.addEventListener('click',function(){setM(false)})});
+  $$('.mq .tr').forEach(function(t){var c=$('ul',t).cloneNode(true);c.setAttribute('aria-hidden','true');t.appendChild(c)});
 
-  // balance count up
-  var amt=$('#amt'),target=18240.55,t0=null;function fmt(n,d){return n.toLocaleString('en-US',{minimumFractionDigits:d,maximumFractionDigits:d})}
-  function tick(ts){if(!t0)t0=ts;var p=Math.min(1,(ts-t0)/1600),e=1-Math.pow(1-p,4);amt.textContent='$'+fmt(15840.55+(target-15840.55)*e,2);if(p<1)requestAnimationFrame(tick)}
-  setTimeout(function(){requestAnimationFrame(tick)},1100);
+  function fmt(n,d){return n.toLocaleString('en-US',{minimumFractionDigits:d,maximumFractionDigits:d})}
+  var R={USD:1,EUR:.92,GBP:.79,CAD:1.37},Y={USD:'$',EUR:'€',GBP:'£',CAD:'C$'},ai=$('#ai'),ci=$('#ci'),co=$('#co');
+  function calc(){var v=parseFloat(ai.value.replace(/[^0-9.]/g,''))||0,r=R[co.value]/R[ci.value],fee=v*.006,got=(v-fee)*r;$('#ao').textContent=Y[co.value]+fmt(got,2);$('#rt').textContent='1 '+ci.value+' = '+r.toFixed(4)+' '+co.value;$('#lf').textContent=Y[ci.value]+fmt(fee,2);$('#ls').textContent='+ '+Y[co.value]+fmt(Math.max(0,got-v*.965*r),2)}
+  ai.addEventListener('input',calc);ci.addEventListener('change',calc);co.addEventListener('change',calc);calc();
 
-  // converter
-  var USD={USD:1,EUR:.92,GBP:.79,CAD:1.37,AUD:1.52},SYM={USD:'$',EUR:'€',GBP:'£',CAD:'C$',AUD:'A$'};
-  var ai=$('#amt-in'),ci=$('#cur-in'),co=$('#cur-out'),ao=$('#amt-out');
-  function calc(){var v=parseFloat(ai.value.replace(/[^0-9.]/g,''))||0,rate=USD[co.value]/USD[ci.value],fee=v*.006,got=(v-fee)*rate,bank=v*(1-.035)*rate;
-    ao.textContent=SYM[co.value]+fmt(got,2);$('#l-fee').textContent=SYM[ci.value]+fmt(fee,2);$('#l-rate').textContent='1 '+ci.value+' = '+rate.toFixed(4)+' '+co.value;$('#l-save').textContent='+ '+SYM[co.value]+fmt(Math.max(0,got-bank),2)}
-  ai.addEventListener('input',calc);ci.addEventListener('change',calc);co.addEventListener('change',calc);
-  ai.addEventListener('blur',function(){var v=parseFloat(ai.value.replace(/[^0-9.]/g,''))||0;ai.value=fmt(v,0)});calc();
+  var F=[['Is my money safe with Plover?','Customer funds are held separately from our own in safeguarded accounts at regulated partner banks. We never lend your money out.'],['What does it really cost?','Receiving money is free. Converting costs one flat fee, shown before you confirm. Sending to your own bank is free on every plan.'],['Which currencies can I hold?','US dollars, euros, British pounds, Canadian and Australian dollars, Swiss francs, yen, Singapore dollars and New Zealand dollars.'],['How long do payouts take?','Pro and Studio payouts arrive the same working day. Solo payouts arrive the next working day.'],['Can I use Plover without a company?','Yes. Open an account as an individual and add a company later without changing your account details.']];
+  $('#fq').innerHTML=F.map(function(q,i){return '<div class="qa'+(i?'':' on')+'"><button aria-expanded="'+(!i)+'">'+q[0]+'<i></i></button><div class="an"><div><p>'+q[1]+'</p></div></div></div>'}).join('');
+  $$('.qa').forEach(function(q){$('button',q).addEventListener('click',function(){var o=!q.classList.contains('on');$$('.qa').forEach(function(x){x.classList.remove('on');$('button',x).setAttribute('aria-expanded','false')});if(o){q.classList.add('on');this.setAttribute('aria-expanded','true')}})});
 
-  var track=$('#track'),c=$('ul',track).cloneNode(true);c.setAttribute('aria-hidden','true');track.appendChild(c);
+  var T=[['Turn any quote into a pay link. Clients choose card or bank transfer and you see the money the moment it moves.','Your balance','$12,668.10','Withdraw','Send link'],['Give each teammate a wallet with its own limit. Everyone spends, you approve and nobody shares a card number.','Studio wallet','£4,250.00','Top up','Set limit'],['Ask Pip anything about your account in plain words, from what is overdue to which currency to bill in.','Due this week','$3,150.00','Remind','View'],['Single use card numbers, instant freeze and alerts on every payment keep your money out of the wrong hands.','Blocked this month','3 attempts','Review','Freeze']];
+  var tabs=$$('#tl button'),tw=$('#tw');tabs.forEach(function(b,i){b.addEventListener('click',function(){tabs.forEach(function(x){x.setAttribute('aria-selected',x===b)});tw.classList.add('sw');setTimeout(function(){$('#tx').textContent=T[i][0];$('#twl').textContent=T[i][1];$('#twv').textContent=T[i][2];$('#twa').textContent=T[i][3];$('#twb').textContent=T[i][4];tw.classList.remove('sw')},300)})});
 
+  var Q=[['Odile Ferran','Brand consultant','Plover is the first money tool that actually keeps up with how I work. The number in the calculator is the number that arrives, and it saved me $3,100 in fees last year.'],['Samir Kessane','Product developer','I opened the account on a train and sent my first invoice before my stop. My average time to get paid dropped from eleven days to two.'],['Joss Tenley','Founder, studio of three','We bill clients on three continents. Giving each one local details made us look ten times bigger than we are.']],qi=0,imgs=$$('#tph img'),bq=$('#tqq');
+  function go(d){qi=(qi+d+Q.length)%Q.length;imgs.forEach(function(m,k){m.classList.toggle('on',k===qi)});bq.classList.add('sw');$('#pg').style.left=(qi*33.33)+'%';setTimeout(function(){bq.textContent=Q[qi][2];$('#who').innerHTML=Q[qi][0]+'<span>'+Q[qi][1]+'</span>';bq.classList.remove('sw')},300)}
+  $('#tprev').addEventListener('click',function(){go(-1)});$('#tnext').addEventListener('click',function(){go(1)});
+
+  function count(el){var n=parseFloat(el.dataset.n),f=+el.dataset.f||0,s=el.dataset.s||'',p0=el.dataset.p||'',t0=null;function tk(ts){if(!t0)t0=ts;var p=Math.min(1,(ts-t0)/1400),e=1-Math.pow(1-p,4);el.textContent=p0+(n*e).toFixed(f)+s;if(p<1)requestAnimationFrame(tk)}requestAnimationFrame(tk)}
   if('IntersectionObserver' in window){
-    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px',threshold:.08});$$('.rv').forEach(function(el){io.observe(el)});
-    var so=new IntersectionObserver(function(es){es.forEach(function(e){e.target.classList.toggle('on',e.isIntersecting)})},{rootMargin:'-40% 0px -40% 0px'});
-    if(matchMedia('(max-width:719px)').matches)$$('.step').forEach(function(el){so.observe(el)});else $$('.step')[1].classList.add('on');
-  }else $$('.rv').forEach(function(el){el.classList.add('in')});
-
-  var rail=$('#rail');function step(d){rail.scrollBy({left:d*($('.rev',rail).getBoundingClientRect().width+14),behavior:'smooth'})}
-  $('#prev').addEventListener('click',function(){step(-1)});$('#next').addEventListener('click',function(){step(1)});
-
-  var tg=$('#toggle'),knob=$('.knob',tg),tbs=$$('button',tg);
-  function setP(b){tbs.forEach(function(x){x.setAttribute('aria-pressed',x===b)});knob.style.width=b.offsetWidth+'px';knob.style.transform='translateX('+(b.offsetLeft-5)+'px)';var p=b.dataset.p;
-    $$('[data-m]').forEach(function(el){var v=el.dataset[p];if(el.textContent!==v){el.textContent=v;el.classList.remove('swap');void el.offsetWidth;el.classList.add('swap')}})}
-  tbs.forEach(function(b){b.addEventListener('click',function(){setP(b)})});function ik(){setP($('[aria-pressed=true]',tg))}ik();addEventListener('resize',ik);if(document.fonts&&document.fonts.ready)document.fonts.ready.then(ik);
-
-  $$('.qa').forEach(function(q){$('button',q).addEventListener('click',function(){var o=!q.classList.contains('open');$$('.qa').forEach(function(x){x.classList.remove('open');$('button',x).setAttribute('aria-expanded','false')});if(o){q.classList.add('open');this.setAttribute('aria-expanded','true')}})});
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');$$('[data-n]',e.target).forEach(count);$$('[data-o]',e.target).forEach(function(c){c.style.strokeDashoffset=c.getAttribute('stroke-dasharray')*(1-c.dataset.o/100)});io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px',threshold:.08});
+    $$('.rv').forEach(function(el){io.observe(el)});
+    var sl=$$('#side a'),so=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var id=e.target.id;sl.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+id)})}})},{rootMargin:'-45% 0px -45% 0px'});
+    $$('.pn').forEach(function(p){so.observe(p)});
+  }else{$$('.rv').forEach(function(el){el.classList.add('in')});$$('[data-n]').forEach(count)}
 })();
 </script>
 </body>
